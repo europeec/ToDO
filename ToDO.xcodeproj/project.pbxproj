@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */; };
 		F0B0B7B1270DBEA2003C1FF1 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B7AF270DBEA2003C1FF1 /* MainTableViewCell.xib */; };
+		F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7B2270DBF76003C1FF1 /* Builder.swift */; };
 		F0F8E986270DB148009954B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E985270DB148009954B4 /* AppDelegate.swift */; };
 		F0F8E988270DB148009954B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E987270DB148009954B4 /* SceneDelegate.swift */; };
 		F0F8E98A270DB148009954B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E989270DB148009954B4 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		F0B0B7AF270DBEA2003C1FF1 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		F0B0B7B2270DBF76003C1FF1 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		F0F8E982270DB148009954B4 /* ToDO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F8E985270DB148009954B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0F8E987270DB148009954B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				F0F8E987270DB148009954B4 /* SceneDelegate.swift */,
 				F0F8E989270DB148009954B4 /* ViewController.swift */,
 				F0F8E98B270DB148009954B4 /* Main.storyboard */,
+				F0B0B7B2270DBF76003C1FF1 /* Builder.swift */,
 				F0F8E9C1270DB905009954B4 /* Router.swift */,
 				F0F8E9B9270DB493009954B4 /* MainModule */,
 				F0F8E98E270DB150009954B4 /* Assets.xcassets */,
@@ -326,6 +329,7 @@
 				F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */,
 				F0F8E988270DB148009954B4 /* SceneDelegate.swift in Sources */,
 				F0F8E9C2270DB905009954B4 /* Router.swift in Sources */,
+				F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */,
 				F0F8E9B7270DB192009954B4 /* MainViewController.swift in Sources */,
 				F0F8E9C0270DB79C009954B4 /* Task.swift in Sources */,
 				F0F8E9BE270DB4C4009954B4 /* MainModulePresenter.swift in Sources */,
