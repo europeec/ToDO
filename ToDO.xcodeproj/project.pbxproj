@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */; };
+		F0B0B7B1270DBEA2003C1FF1 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B7AF270DBEA2003C1FF1 /* MainTableViewCell.xib */; };
 		F0F8E986270DB148009954B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E985270DB148009954B4 /* AppDelegate.swift */; };
 		F0F8E988270DB148009954B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E987270DB148009954B4 /* SceneDelegate.swift */; };
 		F0F8E98A270DB148009954B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E989270DB148009954B4 /* ViewController.swift */; };
@@ -18,6 +20,9 @@
 		F0F8E9A9270DB151009954B4 /* ToDOUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E9A8270DB151009954B4 /* ToDOUITestsLaunchTests.swift */; };
 		F0F8E9B7270DB192009954B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E9B5270DB192009954B4 /* MainViewController.swift */; };
 		F0F8E9B8270DB192009954B4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F8E9B6270DB192009954B4 /* MainViewController.xib */; };
+		F0F8E9BE270DB4C4009954B4 /* MainModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E9BD270DB4C4009954B4 /* MainModulePresenter.swift */; };
+		F0F8E9C0270DB79C009954B4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E9BF270DB79C009954B4 /* Task.swift */; };
+		F0F8E9C2270DB905009954B4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E9C1270DB905009954B4 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		F0B0B7AF270DBEA2003C1FF1 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		F0F8E982270DB148009954B4 /* ToDO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F8E985270DB148009954B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0F8E987270DB148009954B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +60,9 @@
 		F0F8E9A8270DB151009954B4 /* ToDOUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDOUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F0F8E9B5270DB192009954B4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F0F8E9B6270DB192009954B4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		F0F8E9BD270DB4C4009954B4 /* MainModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModulePresenter.swift; sourceTree = "<group>"; };
+		F0F8E9BF270DB79C009954B4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		F0F8E9C1270DB905009954B4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +117,8 @@
 				F0F8E987270DB148009954B4 /* SceneDelegate.swift */,
 				F0F8E989270DB148009954B4 /* ViewController.swift */,
 				F0F8E98B270DB148009954B4 /* Main.storyboard */,
-				F0F8E9B5270DB192009954B4 /* MainViewController.swift */,
-				F0F8E9B6270DB192009954B4 /* MainViewController.xib */,
+				F0F8E9C1270DB905009954B4 /* Router.swift */,
+				F0F8E9B9270DB493009954B4 /* MainModule */,
 				F0F8E98E270DB150009954B4 /* Assets.xcassets */,
 				F0F8E990270DB150009954B4 /* LaunchScreen.storyboard */,
 				F0F8E993270DB150009954B4 /* Info.plist */,
@@ -131,6 +141,51 @@
 				F0F8E9A8270DB151009954B4 /* ToDOUITestsLaunchTests.swift */,
 			);
 			path = ToDOUITests;
+			sourceTree = "<group>";
+		};
+		F0F8E9B9270DB493009954B4 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				F0F8E9BC270DB4AC009954B4 /* Presenter */,
+				F0F8E9BB270DB4A7009954B4 /* Model */,
+				F0F8E9BA270DB49F009954B4 /* View */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		F0F8E9BA270DB49F009954B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0F8E9C8270DBE25009954B4 /* Cell */,
+				F0F8E9B5270DB192009954B4 /* MainViewController.swift */,
+				F0F8E9B6270DB192009954B4 /* MainViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0F8E9BB270DB4A7009954B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0F8E9BF270DB79C009954B4 /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0F8E9BC270DB4AC009954B4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F0F8E9BD270DB4C4009954B4 /* MainModulePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F0F8E9C8270DBE25009954B4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */,
+				F0B0B7AF270DBEA2003C1FF1 /* MainTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +296,7 @@
 				F0F8E98F270DB150009954B4 /* Assets.xcassets in Resources */,
 				F0F8E98D270DB148009954B4 /* Main.storyboard in Resources */,
 				F0F8E9B8270DB192009954B4 /* MainViewController.xib in Resources */,
+				F0B0B7B1270DBEA2003C1FF1 /* MainTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,8 +323,12 @@
 			files = (
 				F0F8E98A270DB148009954B4 /* ViewController.swift in Sources */,
 				F0F8E986270DB148009954B4 /* AppDelegate.swift in Sources */,
+				F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */,
 				F0F8E988270DB148009954B4 /* SceneDelegate.swift in Sources */,
+				F0F8E9C2270DB905009954B4 /* Router.swift in Sources */,
 				F0F8E9B7270DB192009954B4 /* MainViewController.swift in Sources */,
+				F0F8E9C0270DB79C009954B4 /* Task.swift in Sources */,
+				F0F8E9BE270DB4C4009954B4 /* MainModulePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
