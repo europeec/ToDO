@@ -11,6 +11,9 @@ class MainTableViewCell: UITableViewCell {
     static let identifier = "MainTableViewCell"
     static let nib = UINib(nibName: identifier, bundle: nil)
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

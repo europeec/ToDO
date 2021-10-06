@@ -40,13 +40,16 @@ class MainPresenter: MainModuleViewPresenterProtocol {
         // ..
         print(date)
         self.view?.loading()
-    
+        
         self.tasks = []
         
-        if tasks != nil, tasks!.count > 0 {
-            self.view?.show()
-        } else {
-            self.view?.empty()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            guard let self = self else { return }
+            if self.tasks != nil, self.tasks!.count > 0 {
+                self.view?.show()
+            } else {
+                self.view?.empty()
+            }
         }
     }
     

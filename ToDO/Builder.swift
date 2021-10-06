@@ -21,6 +21,6 @@ class Builder: BuilderProtocol {
     }
     
     func createAddModule(router: RouterProtocol) -> UIViewController {
-        //
+        return UIViewController()
     }
 }
