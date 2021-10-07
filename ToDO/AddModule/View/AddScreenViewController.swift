@@ -17,6 +17,8 @@ class AddScreenViewController: UIViewController {
         tableView.register(TextFieldTableViewCell.nib, forCellReuseIdentifier: TextFieldTableViewCell.identifier)
         tableView.register(ToggleTableViewCell.nib, forCellReuseIdentifier: ToggleTableViewCell.identifier)
         tableView.register(DatePickerTableViewCell.nib, forCellReuseIdentifier: DatePickerTableViewCell.identifier)
+        
+        
     }
 }
 
@@ -69,6 +71,8 @@ extension AddScreenViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         }
     }
+    
+
     
 }
 

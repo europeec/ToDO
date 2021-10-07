@@ -19,6 +19,7 @@
 		F0B0B7C4270EDC53003C1FF1 /* ToggleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7C2270EDC53003C1FF1 /* ToggleTableViewCell.swift */; };
 		F0B0B7C5270EDC53003C1FF1 /* ToggleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B7C3270EDC53003C1FF1 /* ToggleTableViewCell.xib */; };
 		F0B0B7C9270EDF38003C1FF1 /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7C8270EDF38003C1FF1 /* AddModel.swift */; };
+		F0B0B7CC270EF195003C1FF1 /* AddModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7CB270EF195003C1FF1 /* AddModulePresenter.swift */; };
 		F0F8E986270DB148009954B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E985270DB148009954B4 /* AppDelegate.swift */; };
 		F0F8E988270DB148009954B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E987270DB148009954B4 /* SceneDelegate.swift */; };
 		F0F8E98A270DB148009954B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E989270DB148009954B4 /* ViewController.swift */; };
@@ -65,6 +66,7 @@
 		F0B0B7C2270EDC53003C1FF1 /* ToggleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleTableViewCell.swift; sourceTree = "<group>"; };
 		F0B0B7C3270EDC53003C1FF1 /* ToggleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToggleTableViewCell.xib; sourceTree = "<group>"; };
 		F0B0B7C8270EDF38003C1FF1 /* AddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModel.swift; sourceTree = "<group>"; };
+		F0B0B7CB270EF195003C1FF1 /* AddModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModulePresenter.swift; sourceTree = "<group>"; };
 		F0F8E982270DB148009954B4 /* ToDO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F8E985270DB148009954B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0F8E987270DB148009954B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		F0B0B7B4270E11B3003C1FF1 /* AddModule */ = {
 			isa = PBXGroup;
 			children = (
+				F0B0B7CA270EF18A003C1FF1 /* Presenter */,
 				F0B0B7C7270EDF2A003C1FF1 /* Model */,
 				F0B0B7C6270EDF25003C1FF1 /* View */,
 			);
@@ -148,6 +151,14 @@
 				F0B0B7C8270EDF38003C1FF1 /* AddModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F0B0B7CA270EF18A003C1FF1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F0B0B7CB270EF195003C1FF1 /* AddModulePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		F0F8E979270DB148009954B4 = {
@@ -397,6 +408,7 @@
 				F0B0B7B7270E11E1003C1FF1 /* AddScreenViewController.swift in Sources */,
 				F0B0B7C4270EDC53003C1FF1 /* ToggleTableViewCell.swift in Sources */,
 				F0F8E9C2270DB905009954B4 /* Router.swift in Sources */,
+				F0B0B7CC270EF195003C1FF1 /* AddModulePresenter.swift in Sources */,
 				F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */,
 				F0F8E9B7270DB192009954B4 /* MainViewController.swift in Sources */,
 				F0F8E9C0270DB79C009954B4 /* Task.swift in Sources */,
