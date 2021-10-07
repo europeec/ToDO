@@ -11,7 +11,8 @@ class AddScreenViewController: UIViewController {
     var presenter: AddModuleViewPresenterProtocol!
     @IBOutlet weak var tableView: UITableView!
     
-    var floatingButton = CircleButton(size: 70, color: .orange, label: "")
+    var floatingButton = CircleButton(size: ElementSize.FloatingButton.side.rawValue,
+                                      color: .orange, label: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +24,6 @@ class AddScreenViewController: UIViewController {
         
         floatingButton.addTarget(self, action: #selector(tapOnTheButton), for: .touchUpInside)
         self.view.addSubview(floatingButton)
-
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        floatingButton.widthAnchor.constraint(equalToConstant: MainViewController.buttonSide).isActive = true
-        floatingButton.heightAnchor.constraint(equalToConstant: MainViewController.buttonSide).isActive = true
-        floatingButton.bottomAnchor.constraint(equalTo: self.view.layoutMarginsGuide.bottomAnchor, constant: -20).isActive = true
-        floatingButton.trailingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.trailingAnchor, constant: 0).isActive = true
     }
     
     @objc func tapOnTheButton() {
