@@ -32,6 +32,7 @@ class MainViewController: UIViewController {
         button.layer.shadowOpacity = 0.3
         button.backgroundColor = .orange
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(tapOnTheButton), for: .touchUpInside)
         return button
     }()
     
@@ -54,6 +55,10 @@ class MainViewController: UIViewController {
     
     @objc func changeDate(sender: UIDatePicker) {
         self.presenter.changeDate(new: sender.date)
+    }
+    
+    @objc func tapOnTheButton() {
+        presenter.tapOnAddButton()
     }
 }
 

@@ -7,12 +7,14 @@
 
 import UIKit
 
+// MARK: - ViewProtocol
 protocol MainModuleViewProtocol: AnyObject {
     func loading()
     func empty()
     func show()
 }
 
+// MARK: - PresenterProtocol
 protocol MainModuleViewPresenterProtocol: AnyObject {
     var date: Date? { get set }
     var tasks: [Task]? { get set }
@@ -22,6 +24,7 @@ protocol MainModuleViewPresenterProtocol: AnyObject {
     func changeDate(new: Date)
 }
 
+// MARK: - Presenter
 class MainPresenter: MainModuleViewPresenterProtocol {
     weak var view: MainModuleViewProtocol?
     var router: RouterProtocol?
@@ -55,6 +58,7 @@ class MainPresenter: MainModuleViewPresenterProtocol {
     
     func tapOnAddButton() {
         // present new screen
+        router?.presentAddScreen()
     }
     
     func changeDate(new: Date) {

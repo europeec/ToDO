@@ -37,7 +37,7 @@ class Router: RouterProtocol {
     func presentAddScreen() {
         if let navigationController = navigationController {
             guard let addViewController = builder?.createAddModule(router: self) else { return }
-            navigationController.viewControllers = [addViewController]
+            navigationController.pushViewController(addViewController, animated: true)
         }
     }
     

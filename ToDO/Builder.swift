@@ -21,6 +21,9 @@ class Builder: BuilderProtocol {
     }
     
     func createAddModule(router: RouterProtocol) -> UIViewController {
-        return UIViewController()
+        let view = AddScreenViewController()
+        let presenter = AddModulePresenter(view: view, router: router)
+        view.presenter = presenter
+        return view
     }
 }

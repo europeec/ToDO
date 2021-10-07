@@ -7,11 +7,13 @@
 
 import UIKit
 
+// MARK: - ViewProtocol
 protocol AddModuleViewProtocol: AnyObject {
     func error()
     func reloadSetction()
 }
 
+// MARK: - PresenterProtocol
 protocol AddModuleViewPresenterProtocol: AnyObject {
     var validate: Bool { get }
     var name: String? { get set }
@@ -25,6 +27,7 @@ protocol AddModuleViewPresenterProtocol: AnyObject {
     func save()
 }
 
+// MARK: - Presenter
 class AddModulePresenter: AddModuleViewPresenterProtocol {
     weak var view: AddModuleViewProtocol?
     var router: RouterProtocol?

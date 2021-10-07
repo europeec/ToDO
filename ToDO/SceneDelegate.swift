@@ -15,15 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-//        let builder = Builder()
-//        let navigationController = UINavigationController()
-//        let router = Router(navigationController: navigationController, builder: builder)
-//        router.initialMainViewController()
-//        window?.rootViewController = navigationController
-//        window?.makeKeyAndVisible()
-        
-        let vc = AddScreenViewController()
-        window?.rootViewController = vc
+        let builder = Builder()
+        let navigationController = UINavigationController()
+        let router = Router(navigationController: navigationController, builder: builder)
+        router.initialMainViewController()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 

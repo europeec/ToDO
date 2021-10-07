@@ -12,7 +12,15 @@ class DatePickerTableViewCell: UITableViewCell {
     static let nib = UINib(nibName: identifier, bundle: nil)
 
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var datePicker: UIDatePicker! {
+        didSet {
+            datePicker.addTarget(self, action: #selector(changeDate(sender:)), for: .valueChanged)
+        }
+    }
+    
+    // For check change date
+    var presenter: AddModuleViewPresenterProtocol!
+    var type: CellsConfiguration?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,4 +33,7 @@ class DatePickerTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @objc func changeDate(sender: UIDatePicker) {
+        presenter.changeDate(sender.date, type: type)
+    }
 }

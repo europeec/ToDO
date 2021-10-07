@@ -8,7 +8,7 @@
 import UIKit
 
 class AddScreenViewController: UIViewController {
-    
+    var presenter: AddModuleViewPresenterProtocol!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -17,11 +17,24 @@ class AddScreenViewController: UIViewController {
         tableView.register(TextFieldTableViewCell.nib, forCellReuseIdentifier: TextFieldTableViewCell.identifier)
         tableView.register(ToggleTableViewCell.nib, forCellReuseIdentifier: ToggleTableViewCell.identifier)
         tableView.register(DatePickerTableViewCell.nib, forCellReuseIdentifier: DatePickerTableViewCell.identifier)
-        
-        
+
     }
 }
 
+// MARK: - AddModulePresenter
+extension AddScreenViewController: AddModuleViewProtocol {
+    func error() {
+        // show alert
+    }
+    
+    func reloadSetction() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let indexSet = IndexSet(integer: 1)
+            self.tableView.reloadSections(indexSet, with: .none)
+        }
+    }
+}
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
 extension AddScreenViewController: UITableViewDataSource, UITableViewDelegate {
@@ -46,10 +59,6 @@ extension AddScreenViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let type = getTypeForIndexPath(indexPath) else { return .zero }
-        if type == .textFieldDescription {
-            return self.view.frame.size.height * 0.3
-        }
         return 50
     }
     
@@ -58,22 +67,28 @@ extension AddScreenViewController: UITableViewDataSource, UITableViewDelegate {
         
         switch type {
         case .textFieldName, .textFieldDescription:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.identifier, for: indexPath) as? TextFieldTableViewCell else { fatalError("Cann't create TextFieldCell") }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.identifier, for: indexPath) as? TextFieldTableViewCell else { fatalError("Cann't create TextFieldCell")
+            }
             cell.textField.placeholder = type.text
             return cell
+            
         case .toggle:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ToggleTableViewCell.identifier, for: indexPath) as? ToggleTableViewCell else { fatalError("Cann't create ToggleCell") }
             cell.label.text = type.text
+            cell.toggle.isOn = presenter.isAllDay
+            cell.presenter = presenter
             return cell
+            
         case .startDate, .endDate:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: DatePickerTableViewCell.identifier, for: indexPath) as? DatePickerTableViewCell else { fatalError("Cann't create DatePickerCell") }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier:      DatePickerTableViewCell.identifier, for: indexPath) as? DatePickerTableViewCell else { fatalError("Cann't create DatePickerCell")
+            }
+            
             cell.label.text = type.text
+            cell.type = type
+            cell.presenter = presenter
+            cell.datePicker.date = type.date
+            cell.datePicker.datePickerMode = presenter.isAllDay ? .date : .dateAndTime
             return cell
         }
     }
-    
-
-    
 }
-
-//extension AddScreenViewController: UITextFieldDelegate, UIDatePickerDele

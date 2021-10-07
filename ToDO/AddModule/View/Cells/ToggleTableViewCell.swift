@@ -12,12 +12,22 @@ class ToggleTableViewCell: UITableViewCell {
     static let nib = UINib(nibName: identifier, bundle: nil)
 
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var toggle: UISwitch!
+    @IBOutlet weak var toggle: UISwitch! {
+        didSet {
+            // можно использовать IBAction
+            toggle.addTarget(self, action: #selector(toggleSwitch), for: .valueChanged)
+        }
+    }
+    
+    // for checking toggle
+    var presenter: AddModuleViewPresenterProtocol!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    
+    @objc func toggleSwitch(sender: UISwitch) {
+        presenter.toggle()
+    }
 }
