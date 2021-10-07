@@ -17,22 +17,11 @@ class DatePickerTableViewCell: UITableViewCell {
             datePicker.addTarget(self, action: #selector(changeDate(sender:)), for: .valueChanged)
         }
     }
-    
+
     // For check change date
     var presenter: AddModuleViewPresenterProtocol!
     var type: CellsConfiguration?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     @objc func changeDate(sender: UIDatePicker) {
         presenter.changeDate(sender.date, type: type)
     }

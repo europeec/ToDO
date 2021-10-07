@@ -31,23 +31,23 @@ protocol AddModuleViewPresenterProtocol: AnyObject {
 class AddModulePresenter: AddModuleViewPresenterProtocol {
     weak var view: AddModuleViewProtocol?
     var router: RouterProtocol?
-    
+
     var validate: Bool {
         return name != nil && (isAllDay || (endDate != nil && startDate != nil))
     }
-    
+
     var name: String?
     var description: String?
     var isAllDay: Bool
     var startDate: Date?
     var endDate: Date?
-    
+
     required init(view: AddModuleViewProtocol, router: RouterProtocol) {
         self.view = view
         self.router = router
         self.isAllDay = true
     }
-    
+
     func changeDate(_ date: Date, type: CellsConfiguration?) {
         guard let type = type else { return }
         if type == .startDate {
@@ -56,16 +56,16 @@ class AddModulePresenter: AddModuleViewPresenterProtocol {
             endDate = date
         }
     }
-    
+
     func toggle() {
         isAllDay = !isAllDay
         view?.reloadSetction()
     }
-    
+
     func save() {
-        // TODO
+        // TODO: save
         if validate {
-            
+
         }
     }
 }

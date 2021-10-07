@@ -13,7 +13,7 @@ enum CellsConfiguration {
     case toggle
     case startDate
     case endDate
-    
+
     var text: String {
         switch self {
         case .textFieldName:
@@ -28,7 +28,7 @@ enum CellsConfiguration {
             return "Конец"
         }
     }
-    
+
     var date: Date {
         switch self {
         case .startDate:
@@ -43,7 +43,7 @@ enum CellsConfiguration {
             return Date()
         }
     }
-    
+
     private var startOfDay: Date {
         return Calendar.current.startOfDay(for: Date())
     }
@@ -51,7 +51,7 @@ enum CellsConfiguration {
 
 enum TitleForSection {
     case naming, date
-    
+
     var title: String {
         switch self {
         case .naming:

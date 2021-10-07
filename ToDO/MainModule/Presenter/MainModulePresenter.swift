@@ -30,22 +30,22 @@ class MainPresenter: MainModuleViewPresenterProtocol {
     var router: RouterProtocol?
     var date: Date?
     var tasks: [Task]?
-    
+
     required init(view: MainModuleViewProtocol, router: RouterProtocol) {
         self.date = Date()
         self.view = view
         self.router = router
         fetchTasks(for: date)
     }
-    
+
     func fetchTasks(for date: Date?) {
         guard let date = date else { return }
         // ..
         print(date)
         self.view?.loading()
-        
+
         self.tasks = []
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             guard let self = self else { return }
             if self.tasks != nil, self.tasks!.count > 0 {
@@ -55,12 +55,12 @@ class MainPresenter: MainModuleViewPresenterProtocol {
             }
         }
     }
-    
+
     func tapOnAddButton() {
         // present new screen
         router?.presentAddScreen()
     }
-    
+
     func changeDate(new: Date) {
         if date != new {
             self.date = new

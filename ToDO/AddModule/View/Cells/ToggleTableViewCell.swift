@@ -18,14 +18,9 @@ class ToggleTableViewCell: UITableViewCell {
             toggle.addTarget(self, action: #selector(toggleSwitch), for: .valueChanged)
         }
     }
-    
+
     // for checking toggle
     var presenter: AddModuleViewPresenterProtocol!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
     @objc func toggleSwitch(sender: UISwitch) {
         presenter.toggle()
