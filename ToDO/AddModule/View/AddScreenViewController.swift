@@ -11,13 +11,32 @@ class AddScreenViewController: UIViewController {
     var presenter: AddModuleViewPresenterProtocol!
     @IBOutlet weak var tableView: UITableView!
     
+    var floatingButton = CircleButton(size: 70, color: .orange, label: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(TextFieldTableViewCell.nib, forCellReuseIdentifier: TextFieldTableViewCell.identifier)
         tableView.register(ToggleTableViewCell.nib, forCellReuseIdentifier: ToggleTableViewCell.identifier)
         tableView.register(DatePickerTableViewCell.nib, forCellReuseIdentifier: DatePickerTableViewCell.identifier)
+        tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        
+        floatingButton.addTarget(self, action: #selector(tapOnTheButton), for: .touchUpInside)
+        self.view.addSubview(floatingButton)
 
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        floatingButton.widthAnchor.constraint(equalToConstant: MainViewController.buttonSide).isActive = true
+        floatingButton.heightAnchor.constraint(equalToConstant: MainViewController.buttonSide).isActive = true
+        floatingButton.bottomAnchor.constraint(equalTo: self.view.layoutMarginsGuide.bottomAnchor, constant: -20).isActive = true
+        floatingButton.trailingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.trailingAnchor, constant: 0).isActive = true
+    }
+    
+    @objc func tapOnTheButton() {
+        presenter.save()
     }
 }
 
@@ -63,7 +82,7 @@ extension AddScreenViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let type = getTypeForIndexPath(indexPath) else { return UITableViewCell() }
+        guard let type = getTypeForIndexPath(indexPath) else { fatalError("Cann`t undifine type of cell, indexPath: \(indexPath)") }
         
         switch type {
         case .textFieldName, .textFieldDescription:

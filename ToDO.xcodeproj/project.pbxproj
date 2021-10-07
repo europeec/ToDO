@@ -20,6 +20,7 @@
 		F0B0B7C5270EDC53003C1FF1 /* ToggleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B7C3270EDC53003C1FF1 /* ToggleTableViewCell.xib */; };
 		F0B0B7C9270EDF38003C1FF1 /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7C8270EDF38003C1FF1 /* AddModel.swift */; };
 		F0B0B7CC270EF195003C1FF1 /* AddModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7CB270EF195003C1FF1 /* AddModulePresenter.swift */; };
+		F0B0B7CE270F1D82003C1FF1 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7CD270F1D82003C1FF1 /* CircleButton.swift */; };
 		F0F8E986270DB148009954B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E985270DB148009954B4 /* AppDelegate.swift */; };
 		F0F8E988270DB148009954B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E987270DB148009954B4 /* SceneDelegate.swift */; };
 		F0F8E98A270DB148009954B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E989270DB148009954B4 /* ViewController.swift */; };
@@ -67,6 +68,7 @@
 		F0B0B7C3270EDC53003C1FF1 /* ToggleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToggleTableViewCell.xib; sourceTree = "<group>"; };
 		F0B0B7C8270EDF38003C1FF1 /* AddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModel.swift; sourceTree = "<group>"; };
 		F0B0B7CB270EF195003C1FF1 /* AddModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModulePresenter.swift; sourceTree = "<group>"; };
+		F0B0B7CD270F1D82003C1FF1 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		F0F8E982270DB148009954B4 /* ToDO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F8E985270DB148009954B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0F8E987270DB148009954B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				F0F8E98B270DB148009954B4 /* Main.storyboard */,
 				F0B0B7B2270DBF76003C1FF1 /* Builder.swift */,
 				F0F8E9C1270DB905009954B4 /* Router.swift */,
+				F0B0B7CD270F1D82003C1FF1 /* CircleButton.swift */,
 				F0F8E9B9270DB493009954B4 /* MainModule */,
 				F0B0B7B4270E11B3003C1FF1 /* AddModule */,
 				F0F8E98E270DB150009954B4 /* Assets.xcassets */,
@@ -408,6 +411,7 @@
 				F0B0B7B7270E11E1003C1FF1 /* AddScreenViewController.swift in Sources */,
 				F0B0B7C4270EDC53003C1FF1 /* ToggleTableViewCell.swift in Sources */,
 				F0F8E9C2270DB905009954B4 /* Router.swift in Sources */,
+				F0B0B7CE270F1D82003C1FF1 /* CircleButton.swift in Sources */,
 				F0B0B7CC270EF195003C1FF1 /* AddModulePresenter.swift in Sources */,
 				F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */,
 				F0F8E9B7270DB192009954B4 /* MainViewController.swift in Sources */,
