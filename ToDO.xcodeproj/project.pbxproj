@@ -10,6 +10,15 @@
 		F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */; };
 		F0B0B7B1270DBEA2003C1FF1 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B7AF270DBEA2003C1FF1 /* MainTableViewCell.xib */; };
 		F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7B2270DBF76003C1FF1 /* Builder.swift */; };
+		F0B0B7B7270E11E1003C1FF1 /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7B5270E11E1003C1FF1 /* AddScreenViewController.swift */; };
+		F0B0B7B8270E11E1003C1FF1 /* AddScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B7B6270E11E1003C1FF1 /* AddScreenViewController.xib */; };
+		F0B0B7BB270EDAED003C1FF1 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7B9270EDAED003C1FF1 /* DatePickerTableViewCell.swift */; };
+		F0B0B7BC270EDAED003C1FF1 /* DatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B7BA270EDAED003C1FF1 /* DatePickerTableViewCell.xib */; };
+		F0B0B7C0270EDB08003C1FF1 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7BE270EDB08003C1FF1 /* TextFieldTableViewCell.swift */; };
+		F0B0B7C1270EDB08003C1FF1 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B7BF270EDB08003C1FF1 /* TextFieldTableViewCell.xib */; };
+		F0B0B7C4270EDC53003C1FF1 /* ToggleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7C2270EDC53003C1FF1 /* ToggleTableViewCell.swift */; };
+		F0B0B7C5270EDC53003C1FF1 /* ToggleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B7C3270EDC53003C1FF1 /* ToggleTableViewCell.xib */; };
+		F0B0B7C9270EDF38003C1FF1 /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7C8270EDF38003C1FF1 /* AddModel.swift */; };
 		F0F8E986270DB148009954B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E985270DB148009954B4 /* AppDelegate.swift */; };
 		F0F8E988270DB148009954B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E987270DB148009954B4 /* SceneDelegate.swift */; };
 		F0F8E98A270DB148009954B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E989270DB148009954B4 /* ViewController.swift */; };
@@ -47,6 +56,15 @@
 		F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		F0B0B7AF270DBEA2003C1FF1 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		F0B0B7B2270DBF76003C1FF1 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		F0B0B7B5270E11E1003C1FF1 /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
+		F0B0B7B6270E11E1003C1FF1 /* AddScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddScreenViewController.xib; sourceTree = "<group>"; };
+		F0B0B7B9270EDAED003C1FF1 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		F0B0B7BA270EDAED003C1FF1 /* DatePickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerTableViewCell.xib; sourceTree = "<group>"; };
+		F0B0B7BE270EDB08003C1FF1 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		F0B0B7BF270EDB08003C1FF1 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		F0B0B7C2270EDC53003C1FF1 /* ToggleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleTableViewCell.swift; sourceTree = "<group>"; };
+		F0B0B7C3270EDC53003C1FF1 /* ToggleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToggleTableViewCell.xib; sourceTree = "<group>"; };
+		F0B0B7C8270EDF38003C1FF1 /* AddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModel.swift; sourceTree = "<group>"; };
 		F0F8E982270DB148009954B4 /* ToDO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F8E985270DB148009954B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0F8E987270DB148009954B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +110,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F0B0B7B4270E11B3003C1FF1 /* AddModule */ = {
+			isa = PBXGroup;
+			children = (
+				F0B0B7C7270EDF2A003C1FF1 /* Model */,
+				F0B0B7C6270EDF25003C1FF1 /* View */,
+			);
+			path = AddModule;
+			sourceTree = "<group>";
+		};
+		F0B0B7BD270EDAF2003C1FF1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F0B0B7B9270EDAED003C1FF1 /* DatePickerTableViewCell.swift */,
+				F0B0B7BA270EDAED003C1FF1 /* DatePickerTableViewCell.xib */,
+				F0B0B7BE270EDB08003C1FF1 /* TextFieldTableViewCell.swift */,
+				F0B0B7BF270EDB08003C1FF1 /* TextFieldTableViewCell.xib */,
+				F0B0B7C2270EDC53003C1FF1 /* ToggleTableViewCell.swift */,
+				F0B0B7C3270EDC53003C1FF1 /* ToggleTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F0B0B7C6270EDF25003C1FF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0B0B7B5270E11E1003C1FF1 /* AddScreenViewController.swift */,
+				F0B0B7B6270E11E1003C1FF1 /* AddScreenViewController.xib */,
+				F0B0B7BD270EDAF2003C1FF1 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0B0B7C7270EDF2A003C1FF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0B0B7C8270EDF38003C1FF1 /* AddModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F0F8E979270DB148009954B4 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +180,7 @@
 				F0B0B7B2270DBF76003C1FF1 /* Builder.swift */,
 				F0F8E9C1270DB905009954B4 /* Router.swift */,
 				F0F8E9B9270DB493009954B4 /* MainModule */,
+				F0B0B7B4270E11B3003C1FF1 /* AddModule */,
 				F0F8E98E270DB150009954B4 /* Assets.xcassets */,
 				F0F8E990270DB150009954B4 /* LaunchScreen.storyboard */,
 				F0F8E993270DB150009954B4 /* Info.plist */,
@@ -295,11 +354,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0B0B7C5270EDC53003C1FF1 /* ToggleTableViewCell.xib in Resources */,
 				F0F8E992270DB150009954B4 /* LaunchScreen.storyboard in Resources */,
 				F0F8E98F270DB150009954B4 /* Assets.xcassets in Resources */,
+				F0B0B7BC270EDAED003C1FF1 /* DatePickerTableViewCell.xib in Resources */,
+				F0B0B7B8270E11E1003C1FF1 /* AddScreenViewController.xib in Resources */,
 				F0F8E98D270DB148009954B4 /* Main.storyboard in Resources */,
 				F0F8E9B8270DB192009954B4 /* MainViewController.xib in Resources */,
 				F0B0B7B1270DBEA2003C1FF1 /* MainTableViewCell.xib in Resources */,
+				F0B0B7C1270EDB08003C1FF1 /* TextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +390,12 @@
 				F0F8E98A270DB148009954B4 /* ViewController.swift in Sources */,
 				F0F8E986270DB148009954B4 /* AppDelegate.swift in Sources */,
 				F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */,
+				F0B0B7C0270EDB08003C1FF1 /* TextFieldTableViewCell.swift in Sources */,
+				F0B0B7BB270EDAED003C1FF1 /* DatePickerTableViewCell.swift in Sources */,
+				F0B0B7C9270EDF38003C1FF1 /* AddModel.swift in Sources */,
 				F0F8E988270DB148009954B4 /* SceneDelegate.swift in Sources */,
+				F0B0B7B7270E11E1003C1FF1 /* AddScreenViewController.swift in Sources */,
+				F0B0B7C4270EDC53003C1FF1 /* ToggleTableViewCell.swift in Sources */,
 				F0F8E9C2270DB905009954B4 /* Router.swift in Sources */,
 				F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */,
 				F0F8E9B7270DB192009954B4 /* MainViewController.swift in Sources */,
