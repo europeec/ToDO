@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CellsConfiguration {
+enum CellsConfiguration: CaseIterable {
     case textFieldName
     case textFieldDescription
     case toggle
@@ -47,6 +47,19 @@ enum CellsConfiguration {
     private var startOfDay: Date {
         return Calendar.current.startOfDay(for: Date())
     }
+    
+    static func getTypeForIndexPath(_ indexPath: IndexPath) -> CellsConfiguration? {
+        if indexPath.section == 0 {
+            return indexPath.row == 0 ? .textFieldName : .textFieldDescription
+        } else if indexPath.section == 1 {
+            if indexPath.row == 0 {
+                return .toggle
+            } else {
+                return indexPath.row == 1 ? .startDate : .endDate
+            }
+        }
+        return nil
+    }
 }
 
 enum TitleForSection {
@@ -62,15 +75,3 @@ enum TitleForSection {
     }
 }
 
-func getTypeForIndexPath(_ indexPath: IndexPath) -> CellsConfiguration? {
-    if indexPath.section == 0 {
-        return indexPath.row == 0 ? .textFieldName : .textFieldDescription
-    } else if indexPath.section == 1 {
-        if indexPath.row == 0 {
-            return .toggle
-        } else {
-            return indexPath.row == 1 ? .startDate : .endDate
-        }
-    }
-    return nil
-}

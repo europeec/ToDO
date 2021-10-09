@@ -22,6 +22,7 @@
 		F0B0B7CC270EF195003C1FF1 /* AddModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7CB270EF195003C1FF1 /* AddModulePresenter.swift */; };
 		F0B0B7CE270F1D82003C1FF1 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7CD270F1D82003C1FF1 /* CircleButton.swift */; };
 		F0B0B7D0270F2140003C1FF1 /* ElementSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7CF270F2140003C1FF1 /* ElementSize.swift */; };
+		F0B0B7D3270F71D8003C1FF1 /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7C8270EDF38003C1FF1 /* AddModel.swift */; };
 		F0F8E986270DB148009954B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E985270DB148009954B4 /* AppDelegate.swift */; };
 		F0F8E988270DB148009954B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E987270DB148009954B4 /* SceneDelegate.swift */; };
 		F0F8E98A270DB148009954B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E989270DB148009954B4 /* ViewController.swift */; };
@@ -463,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0F8E99D270DB151009954B4 /* ToDOTests.swift in Sources */,
+				F0B0B7D3270F71D8003C1FF1 /* AddModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

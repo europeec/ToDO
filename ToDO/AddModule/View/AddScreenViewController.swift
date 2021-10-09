@@ -74,7 +74,7 @@ extension AddScreenViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let type = getTypeForIndexPath(indexPath) else {
+        guard let type = CellsConfiguration.getTypeForIndexPath(indexPath) else {
             fatalError("Cann`t undifine type of cell, indexPath: \(indexPath)")
         }
 
