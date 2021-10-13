@@ -25,7 +25,8 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        presenter.fetchTasks(for: presenter.date)
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: calendarView)
         tableView.register(MainTableViewCell.nib, forCellReuseIdentifier: MainTableViewCell.identifier)
 
@@ -52,20 +53,25 @@ extension MainViewController: MainModuleViewProtocol {
     }
 
     func show() {
-        //
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            print(self.presenter.tasks)
+            self.tableView.reloadData()
+        }
     }
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return presenter.tasks?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier,
                                                        for: indexPath) as? MainTableViewCell else { fatalError() }
-        cell.titleLabel.text = String(indexPath.row)
-        cell.descriptionLabel.text = String("oooohhh")
+        guard let task = presenter.tasks?[indexPath.row] else { fatalError("task not created?")}
+        cell.titleLabel.text = task.name
+        cell.descriptionLabel.text = task.about
         return cell
     }
 }

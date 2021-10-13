@@ -10,6 +10,7 @@ import UIKit
 protocol RouterMainProtocol: AnyObject {
     var navigationController: UINavigationController? { get set }
     var builder: BuilderProtocol? { get set }
+    var memory: MemoryManagerProtocol? { get set }
     func initialMainViewController()
 }
 
@@ -21,22 +22,24 @@ protocol RouterProtocol: RouterMainProtocol {
 class Router: RouterProtocol {
     var navigationController: UINavigationController?
     var builder: BuilderProtocol?
+    var memory: MemoryManagerProtocol?
 
-    init(navigationController: UINavigationController?, builder: BuilderProtocol?) {
+    init(navigationController: UINavigationController?, builder: BuilderProtocol?, memory: MemoryManagerProtocol?) {
         self.navigationController = navigationController
         self.builder = builder
+        self.memory = memory
     }
 
     func initialMainViewController() {
         if let navigationController = navigationController {
-            guard let mainViewController = builder?.createMainModule(router: self) else { return }
+            guard let memory = memory, let mainViewController = builder?.createMainModule(router: self, memory: memory) else { return }
             navigationController.viewControllers = [mainViewController]
         }
     }
 
     func presentAddScreen() {
         if let navigationController = navigationController {
-            guard let addViewController = builder?.createAddModule(router: self) else { return }
+            guard let memory = memory, let addViewController = builder?.createAddModule(router: self, memory: memory) else { return }
             navigationController.pushViewController(addViewController, animated: true)
         }
     }
