@@ -27,6 +27,7 @@
 		F0B0B7CE270F1D82003C1FF1 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7CD270F1D82003C1FF1 /* CircleButton.swift */; };
 		F0B0B7D0270F2140003C1FF1 /* ElementSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7CF270F2140003C1FF1 /* ElementSize.swift */; };
 		F0B0B7D3270F71D8003C1FF1 /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7C8270EDF38003C1FF1 /* AddModel.swift */; };
+		F0B3EF3527177A1C00F723BF /* ExtensionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3EF3427177A1C00F723BF /* ExtensionDate.swift */; };
 		F0C8791827117B8700DEA605 /* MemoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C8791727117B8700DEA605 /* MemoryManager.swift */; };
 		F0F8E986270DB148009954B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E985270DB148009954B4 /* AppDelegate.swift */; };
 		F0F8E988270DB148009954B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E987270DB148009954B4 /* SceneDelegate.swift */; };
@@ -99,6 +100,7 @@
 		F0B0B7CB270EF195003C1FF1 /* AddModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModulePresenter.swift; sourceTree = "<group>"; };
 		F0B0B7CD270F1D82003C1FF1 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		F0B0B7CF270F2140003C1FF1 /* ElementSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementSize.swift; sourceTree = "<group>"; };
+		F0B3EF3427177A1C00F723BF /* ExtensionDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDate.swift; sourceTree = "<group>"; };
 		F0C8791727117B8700DEA605 /* MemoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryManager.swift; sourceTree = "<group>"; };
 		F0F8E982270DB148009954B4 /* ToDO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F8E985270DB148009954B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				F0F8E9C1270DB905009954B4 /* Router.swift */,
 				F0B0B7CD270F1D82003C1FF1 /* CircleButton.swift */,
 				F0B0B7CF270F2140003C1FF1 /* ElementSize.swift */,
+				F0B3EF3427177A1C00F723BF /* ExtensionDate.swift */,
 				F032ACB3271581D400C3256C /* Memory */,
 				F0F8E9B9270DB493009954B4 /* MainModule */,
 				F0B0B7B4270E11B3003C1FF1 /* AddModule */,
@@ -611,6 +614,7 @@
 				F0B0B7C4270EDC53003C1FF1 /* ToggleTableViewCell.swift in Sources */,
 				F0F8E9C2270DB905009954B4 /* Router.swift in Sources */,
 				F0B0B7CE270F1D82003C1FF1 /* CircleButton.swift in Sources */,
+				F0B3EF3527177A1C00F723BF /* ExtensionDate.swift in Sources */,
 				F0B0B7CC270EF195003C1FF1 /* AddModulePresenter.swift in Sources */,
 				F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */,
 				F0F8E9B7270DB192009954B4 /* MainViewController.swift in Sources */,

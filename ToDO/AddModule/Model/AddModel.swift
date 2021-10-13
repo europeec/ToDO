@@ -32,20 +32,12 @@ enum CellsConfiguration: CaseIterable {
     var date: Date {
         switch self {
         case .startDate:
-            return startOfDay
+            return Date.startOfDay(at: Date())
         case .endDate:
-            var dateComponents = DateComponents()
-            dateComponents.hour = 23
-            dateComponents.minute = 59
-            dateComponents.second = 59
-            return Calendar.current.date(byAdding: dateComponents, to: startOfDay)!
+            return Date.endOfDay(at: Date())
         default:
             return Date()
         }
-    }
-
-    private var startOfDay: Date {
-        return Calendar.current.startOfDay(for: Date())
     }
     
     static func getTypeForIndexPath(_ indexPath: IndexPath) -> CellsConfiguration? {

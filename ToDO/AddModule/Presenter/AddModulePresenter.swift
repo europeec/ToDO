@@ -18,8 +18,8 @@ protocol AddModuleViewPresenterProtocol: AnyObject {
     var validate: Bool { get }
     var name: String? { get set }
     var description: String? { get set }
-    var startDate: Date? { get set }
-    var endDate: Date? { get set }
+    var startDate: Date { get set }
+    var endDate: Date { get set }
     var isAllDay: Bool { get set }
     init(view: AddModuleViewProtocol, router: RouterProtocol, memory: MemoryManagerProtocol)
     func changeDate(_ date: Date, type: CellsConfiguration?)
@@ -36,20 +36,22 @@ class AddModulePresenter: AddModuleViewPresenterProtocol {
     var memory: MemoryManagerProtocol?
 
     var validate: Bool {
-        return name != nil && (isAllDay || (endDate != nil && startDate != nil))
+        return name != nil && (isAllDay || (startDate <= endDate))
     }
 
     var name: String?
     var description: String?
     var isAllDay: Bool
-    var startDate: Date?
-    var endDate: Date?
+    var startDate: Date
+    var endDate: Date
 
     required init(view: AddModuleViewProtocol, router: RouterProtocol, memory: MemoryManagerProtocol) {
         self.view = view
         self.router = router
         self.memory = memory
         self.isAllDay = true
+        self.startDate = Date.startOfDay()
+        self.endDate = Date.endOfDay()
     }
 
     func changeDate(_ date: Date, type: CellsConfiguration?) {
@@ -69,8 +71,9 @@ class AddModulePresenter: AddModuleViewPresenterProtocol {
     func save() {
         if validate {
             let task = Task()
-            task.name = name
+            task.name = name!
             task.about = description
+            task.startDate = startDate
             memory?.save(task: task)
             router?.popToRoot()
         } else {
