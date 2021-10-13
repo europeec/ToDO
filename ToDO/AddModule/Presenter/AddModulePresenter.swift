@@ -21,8 +21,10 @@ protocol AddModuleViewPresenterProtocol: AnyObject {
     var startDate: Date? { get set }
     var endDate: Date? { get set }
     var isAllDay: Bool { get set }
-    init(view: AddModuleViewProtocol, router: RouterProtocol)
+    init(view: AddModuleViewProtocol, router: RouterProtocol, memory: MemoryManagerProtocol)
     func changeDate(_ date: Date, type: CellsConfiguration?)
+    func editName(_ str: String?)
+    func editDescription(_ str: String?)
     func toggle()
     func save()
 }
@@ -31,6 +33,7 @@ protocol AddModuleViewPresenterProtocol: AnyObject {
 class AddModulePresenter: AddModuleViewPresenterProtocol {
     weak var view: AddModuleViewProtocol?
     var router: RouterProtocol?
+    var memory: MemoryManagerProtocol?
 
     var validate: Bool {
         return name != nil && (isAllDay || (endDate != nil && startDate != nil))
@@ -42,9 +45,10 @@ class AddModulePresenter: AddModuleViewPresenterProtocol {
     var startDate: Date?
     var endDate: Date?
 
-    required init(view: AddModuleViewProtocol, router: RouterProtocol) {
+    required init(view: AddModuleViewProtocol, router: RouterProtocol, memory: MemoryManagerProtocol) {
         self.view = view
         self.router = router
+        self.memory = memory
         self.isAllDay = true
     }
 
@@ -63,9 +67,22 @@ class AddModulePresenter: AddModuleViewPresenterProtocol {
     }
 
     func save() {
-        // TODO: save
         if validate {
-
+            let task = Task()
+            task.name = name
+            task.about = description
+            memory?.save(task: task)
+            router?.popToRoot()
+        } else {
+            self.view?.error()
         }
+    }
+    
+    func editName(_ str: String?) {
+        self.name = str
+    }
+    
+    func editDescription(_ str: String?) {
+        self.description = str
     }
 }

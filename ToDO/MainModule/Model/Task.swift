@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Task {
-    var name: String
-    var description: String?
-}
+//struct Task {
+//    var name: String
+//    var description: String?
+//}

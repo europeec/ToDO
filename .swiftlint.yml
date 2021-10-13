@@ -1,7 +1,6 @@
 warning_threshold: 15
 excluded:
-    — Pods
-    — MBUITest
+    — ${PWD}/Pods
 
 disabled_rules:
     — trailing_whitespace

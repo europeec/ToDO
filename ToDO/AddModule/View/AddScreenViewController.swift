@@ -85,6 +85,8 @@ extension AddScreenViewController: UITableViewDataSource, UITableViewDelegate {
                 fatalError("Cann't create TextFieldCell")
             }
             cell.textField.placeholder = type.text
+            cell.type = type
+            cell.presenter = presenter
             return cell
 
         case .toggle:

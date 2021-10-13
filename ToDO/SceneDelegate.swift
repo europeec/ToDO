@@ -16,8 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
 
         let builder = Builder()
+        let memory = MemoryManager()
         let navigationController = UINavigationController()
-        let router = Router(navigationController: navigationController, builder: builder)
+        let router = Router(navigationController: navigationController, builder: builder, memory: memory)
         router.initialMainViewController()
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
