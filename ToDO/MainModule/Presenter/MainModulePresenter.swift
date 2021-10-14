@@ -19,7 +19,7 @@ protocol MainModuleViewPresenterProtocol: AnyObject {
     var date: Date? { get set }
     var tasks: [Task]? { get set }
     init(view: MainModuleViewProtocol, router: RouterProtocol, memory: MemoryManagerProtocol)
-    func fetchTasks(for date: Date?)
+    func fetchTasks(at date: Date?)
     func tapOnAddButton()
     func changeDate(new: Date)
 }
@@ -37,16 +37,15 @@ class MainPresenter: MainModuleViewPresenterProtocol {
         self.view = view
         self.router = router
         self.memory = memory
-        fetchTasks(for: date)
     }
 
-    func fetchTasks(for date: Date?) {
+    func fetchTasks(at date: Date?) {
         guard let date = date else { return }
         // ..
         print(date)
         self.view?.loading()
 
-        self.tasks = memory?.fetchTasks()
+        self.tasks = memory?.fetchTasks(at: date)
         guard let tasks = tasks else { return }
         
         if tasks.count > 0 {
@@ -57,14 +56,13 @@ class MainPresenter: MainModuleViewPresenterProtocol {
     }
 
     func tapOnAddButton() {
-        // present new screen
         router?.presentAddScreen()
     }
 
     func changeDate(new: Date) {
         if date != new {
             self.date = new
-            fetchTasks(for: date)
+            fetchTasks(at: date)
         }
     }
 }

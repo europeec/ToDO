@@ -12,30 +12,39 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var calendarView: UIView = {
+    let calendarView: UIDatePicker = {
         let calendar = UIDatePicker()
         calendar.datePickerMode = .date
         calendar.preferredDatePickerStyle = .compact
-        calendar.addTarget(self, action: #selector(changeDate), for: .valueChanged)
         return calendar
     }()
 
-    var floatingButton = CircleButton(size: ElementSize.FloatingButton.side.rawValue,
+    let floatingButton = CircleButton(size: ElementSize.FloatingButton.side.rawValue,
                                       color: .white, label: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.fetchTasks(for: presenter.date)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: calendarView)
+        
         tableView.register(MainTableViewCell.nib, forCellReuseIdentifier: MainTableViewCell.identifier)
 
+        calendarView.addTarget(self, action: #selector(changeDate), for: .valueChanged)
+        
         floatingButton.addTarget(self, action: #selector(tapOnTheButton), for: .touchUpInside)
         self.view.addSubview(floatingButton)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter.fetchTasks(at: presenter.date)
+    }
+
+    
     @objc func changeDate(sender: UIDatePicker) {
-        self.presenter.changeDate(new: sender.date)
+        print(sender.date)
+        presenter.changeDate(new: sender.date)
     }
 
     @objc func tapOnTheButton() {
@@ -55,8 +64,9 @@ extension MainViewController: MainModuleViewProtocol {
     func show() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            print(self.presenter.tasks)
-            self.tableView.reloadData()
+            
+            // reloadSection for use withAnimation, can use just reloadData() without animation
+            self.tableView.reloadSections(IndexSet(integer: 0), with: .middle)
         }
     }
 }

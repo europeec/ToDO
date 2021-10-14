@@ -9,15 +9,8 @@ import Foundation
 import RealmSwift
 
 class Task: Object {
-    @objc dynamic var name: String
+    @objc dynamic var name: String!
     @objc dynamic var about: String?
-    @objc dynamic var startDate: Date
-    @objc dynamic var endDate: Date
-    
-    init(name: String, startDate: Date, endDate: Date, about: String?) {
-        self.name = name
-        self.startDate = startDate
-        self.endDate = endDate
-        self.about = about
-    }
+    @objc dynamic var startDate: Date!
+    @objc dynamic var endDate: Date!
 }

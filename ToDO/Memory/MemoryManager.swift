@@ -10,11 +10,11 @@ import RealmSwift
 
 protocol MemoryManagerProtocol: AnyObject {
     func save(task: Task)
-    func fetchTasks() -> [Task]?
+    func fetchTasks(at date: Date) -> [Task]?
 }
 
 class MemoryManager: MemoryManagerProtocol {
-    let realm = try? Realm()
+    lazy var realm = try? Realm()
     
     func save(task: Task) {
         guard let realm = realm else { return }
@@ -27,8 +27,9 @@ class MemoryManager: MemoryManagerProtocol {
         }
     }
     
-    func fetchTasks() -> [Task]? {
-        guard let realm = realm else { return nil}
-        return Array(realm.objects(Task.self))
+    func fetchTasks(at date: Date) -> [Task]? {
+        guard let realm = realm else { return nil }
+        let objects = realm.objects(Task.self)
+        return Array(objects).filter { $0.startDate...$0.endDate ~= date }
     }
 }

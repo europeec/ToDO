@@ -74,6 +74,7 @@ class AddModulePresenter: AddModuleViewPresenterProtocol {
             task.name = name!
             task.about = description
             task.startDate = startDate
+            task.endDate = endDate
             memory?.save(task: task)
             router?.popToRoot()
         } else {

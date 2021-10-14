@@ -13,4 +13,8 @@ enum ElementSize {
         case bottomPadding = -20
         case trailingPadding = 0
     }
+    
+    enum NavigationBar: CGFloat {
+        case height = 40
+    }
 }
