@@ -180,6 +180,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		F098D6452719CDB100D0A13D /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				F0B0B7CD270F1D82003C1FF1 /* CircleButton.swift */,
+				F0B0B7CF270F2140003C1FF1 /* ElementSize.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
 		F0B0B7B4270E11B3003C1FF1 /* AddModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,8 +269,7 @@
 				F0F8E98B270DB148009954B4 /* Main.storyboard */,
 				F0B0B7B2270DBF76003C1FF1 /* Builder.swift */,
 				F0F8E9C1270DB905009954B4 /* Router.swift */,
-				F0B0B7CD270F1D82003C1FF1 /* CircleButton.swift */,
-				F0B0B7CF270F2140003C1FF1 /* ElementSize.swift */,
+				F098D6452719CDB100D0A13D /* Additional */,
 				F098D6422719C9A700D0A13D /* Extensions */,
 				F032ACB3271581D400C3256C /* Memory */,
 				F0F8E9B9270DB493009954B4 /* MainModule */,

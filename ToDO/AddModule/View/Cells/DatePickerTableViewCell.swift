@@ -20,10 +20,10 @@ class DatePickerTableViewCell: UITableViewCell {
     }
 
     // For check change date
-    var presenter: AddModuleViewPresenterProtocol!
+    var presenter: AddModuleViewPresenterProtocol?
     var type: CellsConfiguration?
 
     @objc func changeDate(sender: UIDatePicker) {
-        presenter.changeDate(sender.date, type: type)
+        presenter?.changeDate(sender.date, type: type)
     }
 }

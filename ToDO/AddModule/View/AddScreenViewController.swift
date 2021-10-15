@@ -12,7 +12,7 @@ class AddScreenViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var floatingButton = CircleButton(size: ElementSize.FloatingButton.side.rawValue,
-                                      color: .orange, label: "")
+                                      color: .floatingButtonColor, label: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,14 @@ extension AddScreenViewController: AddModuleViewProtocol {
             guard let self = self else { return }
             let indexSet = IndexSet(integer: 1)
             self.tableView.reloadSections(indexSet, with: .none)
+        }
+    }
+    
+    func reloadEndDatePicker() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let indexPath = IndexPath(row: 2, section: 1)
+            self.tableView.reloadRows(at: [indexPath], with: .none)
         }
     }
 }
@@ -75,7 +83,7 @@ extension AddScreenViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let type = CellsConfiguration.getTypeForIndexPath(indexPath) else {
-            fatalError("Cann`t undifine type of cell, indexPath: \(indexPath)")
+            fatalError("Cann`t undefine type of cell, indexPath: \(indexPath)")
         }
 
         switch type {
@@ -108,8 +116,20 @@ extension AddScreenViewController: UITableViewDataSource, UITableViewDelegate {
             cell.label.text = type.text
             cell.type = type
             cell.presenter = presenter
-            cell.datePicker.date = type.date
+            if presenter.isAllDay {
+                cell.datePicker.date = presenter.allDate
+                cell.datePicker.minimumDate = nil
+            } else {
+                if type == .startDate {
+                    cell.datePicker.date = presenter.startDate
+                } else {
+                    cell.datePicker.date = presenter.endDate
+                }
+            }
             cell.datePicker.datePickerMode = presenter.isAllDay ? .date : .dateAndTime
+            if !presenter.isAllDay, type == .endDate {
+                cell.datePicker.minimumDate = presenter.startDate
+            }
             return cell
         }
     }

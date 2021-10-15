@@ -11,6 +11,7 @@ import UIKit
 protocol AddModuleViewProtocol: AnyObject {
     func error()
     func reloadSetction()
+    func reloadEndDatePicker()
 }
 
 // MARK: - PresenterProtocol
@@ -20,6 +21,7 @@ protocol AddModuleViewPresenterProtocol: AnyObject {
     var description: String? { get set }
     var startDate: Date { get set }
     var endDate: Date { get set }
+    var allDate: Date { get set }
     var isAllDay: Bool { get set }
     init(view: AddModuleViewProtocol, router: RouterProtocol, memory: MemoryManagerProtocol)
     func changeDate(_ date: Date, type: CellsConfiguration?)
@@ -44,6 +46,7 @@ class AddModulePresenter: AddModuleViewPresenterProtocol {
     var isAllDay: Bool
     var startDate: Date
     var endDate: Date
+    var allDate: Date
 
     required init(view: AddModuleViewProtocol, router: RouterProtocol, memory: MemoryManagerProtocol) {
         self.view = view
@@ -52,14 +55,25 @@ class AddModulePresenter: AddModuleViewPresenterProtocol {
         self.isAllDay = true
         self.startDate = Date.startOfDay()
         self.endDate = Date.endOfDay()
+        self.allDate = Date()
     }
 
     func changeDate(_ date: Date, type: CellsConfiguration?) {
         guard let type = type else { return }
-        if type == .startDate {
+        if isAllDay {
             startDate = date
-        } else {
             endDate = date
+            allDate = date
+            view?.reloadSetction()
+        } else {
+            if type == .startDate {
+                startDate = date
+                
+                // for set new min date
+                view?.reloadEndDatePicker()
+            } else {
+                endDate = date
+            }
         }
     }
 

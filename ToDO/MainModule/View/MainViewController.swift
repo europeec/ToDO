@@ -62,11 +62,12 @@ extension MainViewController: MainModuleViewProtocol {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.3) {
                 self.tableView.alpha = 0
             } completion: { _ in
                 self.tableView.isHidden = true
                 self.tableView?.reloadData()
+                
             }
 
         }
@@ -75,9 +76,13 @@ extension MainViewController: MainModuleViewProtocol {
     func show() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            
-            self.tableView.reloadData()
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.2) {
+                self.tableView.alpha = 0
+            } completion: { _ in
+                self.tableView.reloadData()
+            }
+
+            UIView.animate(withDuration: 0.3) {
                 self.tableView.isHidden = false
                 self.tableView?.alpha = 1
             } completion: { _ in
