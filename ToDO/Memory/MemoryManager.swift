@@ -30,6 +30,10 @@ class MemoryManager: MemoryManagerProtocol {
     func fetchTasks(at date: Date) -> [Task]? {
         guard let realm = realm else { return nil }
         let objects = realm.objects(Task.self)
-        return Array(objects).filter { $0.startDate...$0.endDate ~= date }
+        return Array(objects).filter { filter(date: date, object: $0) }
+    }
+    
+    private func filter(date: Date, object: Task) -> Bool {
+        return date.getDayComponents() >= object.startDate.getDayComponents() && date.getDayComponents() <= object.endDate.getDayComponents()
     }
 }

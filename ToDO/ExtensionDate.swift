@@ -19,4 +19,29 @@ extension Date {
         dateComponents.second = 59
         return Calendar.current.date(byAdding: dateComponents, to: startOfDay(at: date))!
     }
+    
+    func getDayComponents() -> DateComponents {
+        return Calendar.current.dateComponents([.day, .month, .year], from: self)
+    }
+}
+
+extension DateComponents: Comparable {
+    static public func < (lhs: DateComponents, rhs: DateComponents) -> Bool {
+        guard let lday = lhs.day, let lmonth = lhs.month, let lyear = lhs.year else { return false }
+        guard let rday = rhs.day, let rmonth = rhs.month, let ryear = rhs.year else { return false }
+        
+        if lyear < ryear {
+            return true
+        } else if lyear == ryear {
+            if lmonth < rmonth {
+                return true
+            } else if lmonth == rmonth {
+                return lday < rday
+            } else {
+                return false 
+            }
+        } else {
+            return false
+        }
+    }
 }

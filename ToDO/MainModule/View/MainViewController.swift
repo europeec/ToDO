@@ -54,32 +54,58 @@ class MainViewController: UIViewController {
 
 extension MainViewController: MainModuleViewProtocol {
     func loading() {
-        self.tableView?.backgroundColor = .red
+//
     }
 
     func empty() {
-        self.tableView?.backgroundColor = .blue
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            UIView.animate(withDuration: 0.5) {
+                self.tableView.alpha = 0
+            } completion: { _ in
+                self.tableView.isHidden = true
+                self.tableView?.reloadData()
+            }
+
+        }
     }
 
     func show() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
-            // reloadSection for use withAnimation, can use just reloadData() without animation
-            self.tableView.reloadSections(IndexSet(integer: 0), with: .middle)
+            self.tableView.reloadData()
+            UIView.animate(withDuration: 0.5) {
+                self.tableView.isHidden = false
+                self.tableView?.alpha = 1
+            }
         }
     }
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.tasks?.count ?? 0
+        guard let tasks = presenter.tableData?.sections[section].tasks else { return 0 }
+        return tasks.count
     }
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        guard let tableData = presenter.tableData else { return 0 }
+        return tableData.sections.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return presenter.tableData?.sections[section].title
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier,
                                                        for: indexPath) as? MainTableViewCell else { fatalError() }
-        guard let task = presenter.tasks?[indexPath.row] else { fatalError("task not created?")}
+        guard let task = presenter.tableData?.sections[indexPath.section].tasks?[indexPath.row] else {
+            fatalError("task not created?")
+        }
+        
         cell.titleLabel.text = task.name
         cell.descriptionLabel.text = task.about
         return cell

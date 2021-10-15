@@ -17,7 +17,7 @@ protocol MainModuleViewProtocol: AnyObject {
 // MARK: - PresenterProtocol
 protocol MainModuleViewPresenterProtocol: AnyObject {
     var date: Date? { get set }
-    var tasks: [Task]? { get set }
+    var tableData: TableModel? { get set }
     init(view: MainModuleViewProtocol, router: RouterProtocol, memory: MemoryManagerProtocol)
     func fetchTasks(at date: Date?)
     func tapOnAddButton()
@@ -30,7 +30,7 @@ class MainPresenter: MainModuleViewPresenterProtocol {
     var router: RouterProtocol?
     var memory: MemoryManagerProtocol?
     var date: Date?
-    var tasks: [Task]?
+    var tableData: TableModel?
 
     required init(view: MainModuleViewProtocol, router: RouterProtocol, memory: MemoryManagerProtocol) {
         self.date = Date()
@@ -41,12 +41,10 @@ class MainPresenter: MainModuleViewPresenterProtocol {
 
     func fetchTasks(at date: Date?) {
         guard let date = date else { return }
-        // ..
-        print(date)
         self.view?.loading()
 
-        self.tasks = memory?.fetchTasks(at: date)
-        guard let tasks = tasks else { return }
+        guard let tasks = memory?.fetchTasks(at: date) else { return }
+        self.tableData = TableModel(tasks: tasks)
         
         if tasks.count > 0 {
             self.view?.show()

@@ -11,6 +11,7 @@
 		B1FF44A3CF0C4117B0706F6C /* Pods_ToDO_ToDOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DB4FD2BE07223098AE7CA2 /* Pods_ToDO_ToDOUITests.framework */; };
 		C7E33B4C00F516824601A0B9 /* Pods_ToDO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C99E46A84FB489502D09A43 /* Pods_ToDO.framework */; };
 		F032ACB5271583B200C3256C /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F032ACB4271583B200C3256C /* TaskModel.swift */; };
+		F098D64127197F0E00D0A13D /* TableViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098D64027197F0E00D0A13D /* TableViewDataModel.swift */; };
 		F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */; };
 		F0B0B7B1270DBEA2003C1FF1 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B7AF270DBEA2003C1FF1 /* MainTableViewCell.xib */; };
 		F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7B2270DBF76003C1FF1 /* Builder.swift */; };
@@ -41,7 +42,6 @@
 		F0F8E9B7270DB192009954B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E9B5270DB192009954B4 /* MainViewController.swift */; };
 		F0F8E9B8270DB192009954B4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F8E9B6270DB192009954B4 /* MainViewController.xib */; };
 		F0F8E9BE270DB4C4009954B4 /* MainModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E9BD270DB4C4009954B4 /* MainModulePresenter.swift */; };
-		F0F8E9C0270DB79C009954B4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E9BF270DB79C009954B4 /* Task.swift */; };
 		F0F8E9C2270DB905009954B4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E9C1270DB905009954B4 /* Router.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +85,7 @@
 		74592BCEF546EAA6E17453C3 /* Pods-ToDOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDOTests.release.xcconfig"; path = "Target Support Files/Pods-ToDOTests/Pods-ToDOTests.release.xcconfig"; sourceTree = "<group>"; };
 		80A930967F5069567C38B9B0 /* Pods-ToDOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDOTests.debug.xcconfig"; path = "Target Support Files/Pods-ToDOTests/Pods-ToDOTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F032ACB4271583B200C3256C /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		F098D64027197F0E00D0A13D /* TableViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataModel.swift; sourceTree = "<group>"; };
 		F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		F0B0B7AF270DBEA2003C1FF1 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		F0B0B7B2270DBF76003C1FF1 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -118,7 +119,6 @@
 		F0F8E9B5270DB192009954B4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F0F8E9B6270DB192009954B4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		F0F8E9BD270DB4C4009954B4 /* MainModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModulePresenter.swift; sourceTree = "<group>"; };
-		F0F8E9BF270DB79C009954B4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		F0F8E9C1270DB905009954B4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -302,7 +302,7 @@
 		F0F8E9BB270DB4A7009954B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F0F8E9BF270DB79C009954B4 /* Task.swift */,
+				F098D64027197F0E00D0A13D /* TableViewDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -606,6 +606,7 @@
 				F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */,
 				F0B0B7C0270EDB08003C1FF1 /* TextFieldTableViewCell.swift in Sources */,
 				F0B0B7BB270EDAED003C1FF1 /* DatePickerTableViewCell.swift in Sources */,
+				F098D64127197F0E00D0A13D /* TableViewDataModel.swift in Sources */,
 				F0B0B7C9270EDF38003C1FF1 /* AddModel.swift in Sources */,
 				F0B0B7D0270F2140003C1FF1 /* ElementSize.swift in Sources */,
 				F0F8E988270DB148009954B4 /* SceneDelegate.swift in Sources */,
@@ -618,7 +619,6 @@
 				F0B0B7CC270EF195003C1FF1 /* AddModulePresenter.swift in Sources */,
 				F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */,
 				F0F8E9B7270DB192009954B4 /* MainViewController.swift in Sources */,
-				F0F8E9C0270DB79C009954B4 /* Task.swift in Sources */,
 				F032ACB5271583B200C3256C /* TaskModel.swift in Sources */,
 				F0F8E9BE270DB4C4009954B4 /* MainModulePresenter.swift in Sources */,
 			);

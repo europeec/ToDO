@@ -23,5 +23,7 @@ class TextFieldTableViewCell: UITableViewCell {
         } else if type == .textFieldDescription {
             presenter.editDescription(sender.text)
         }
+        
+        textField.resignFirstResponder()
     }
 }
