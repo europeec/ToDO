@@ -12,6 +12,7 @@
 		C7E33B4C00F516824601A0B9 /* Pods_ToDO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C99E46A84FB489502D09A43 /* Pods_ToDO.framework */; };
 		F032ACB5271583B200C3256C /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F032ACB4271583B200C3256C /* TaskModel.swift */; };
 		F098D64127197F0E00D0A13D /* TableViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098D64027197F0E00D0A13D /* TableViewDataModel.swift */; };
+		F098D6442719C9B900D0A13D /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098D6432719C9B900D0A13D /* ExtensionUIColor.swift */; };
 		F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */; };
 		F0B0B7B1270DBEA2003C1FF1 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B7AF270DBEA2003C1FF1 /* MainTableViewCell.xib */; };
 		F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7B2270DBF76003C1FF1 /* Builder.swift */; };
@@ -86,6 +87,7 @@
 		80A930967F5069567C38B9B0 /* Pods-ToDOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDOTests.debug.xcconfig"; path = "Target Support Files/Pods-ToDOTests/Pods-ToDOTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F032ACB4271583B200C3256C /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		F098D64027197F0E00D0A13D /* TableViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataModel.swift; sourceTree = "<group>"; };
+		F098D6432719C9B900D0A13D /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		F0B0B7AF270DBEA2003C1FF1 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		F0B0B7B2270DBF76003C1FF1 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -167,6 +169,15 @@
 				F032ACB4271583B200C3256C /* TaskModel.swift */,
 			);
 			path = Memory;
+			sourceTree = "<group>";
+		};
+		F098D6422719C9A700D0A13D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0B3EF3427177A1C00F723BF /* ExtensionDate.swift */,
+				F098D6432719C9B900D0A13D /* ExtensionUIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F0B0B7B4270E11B3003C1FF1 /* AddModule */ = {
@@ -251,7 +262,7 @@
 				F0F8E9C1270DB905009954B4 /* Router.swift */,
 				F0B0B7CD270F1D82003C1FF1 /* CircleButton.swift */,
 				F0B0B7CF270F2140003C1FF1 /* ElementSize.swift */,
-				F0B3EF3427177A1C00F723BF /* ExtensionDate.swift */,
+				F098D6422719C9A700D0A13D /* Extensions */,
 				F032ACB3271581D400C3256C /* Memory */,
 				F0F8E9B9270DB493009954B4 /* MainModule */,
 				F0B0B7B4270E11B3003C1FF1 /* AddModule */,
@@ -620,6 +631,7 @@
 				F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */,
 				F0F8E9B7270DB192009954B4 /* MainViewController.swift in Sources */,
 				F032ACB5271583B200C3256C /* TaskModel.swift in Sources */,
+				F098D6442719C9B900D0A13D /* ExtensionUIColor.swift in Sources */,
 				F0F8E9BE270DB4C4009954B4 /* MainModulePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

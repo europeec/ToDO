@@ -35,6 +35,7 @@ struct SectionData {
 
 struct TableModel {
     var sections: [SectionData]
+    var firstIndex = 23
     
     init(tasks: [Task]) {
         var sectionDict = [Int: [Task]]()
@@ -48,6 +49,8 @@ struct TableModel {
                 } else {
                     sectionDict[index]!.append(task)
                 }
+                
+                firstIndex = min(index, firstIndex)
             }
         }
         

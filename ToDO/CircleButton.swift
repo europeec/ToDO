@@ -13,11 +13,12 @@ class CircleButton: UIButton {
 
         self.layer.cornerRadius = size / 2
         self.layer.shadowRadius = 8
+        self.layer.shadowColor = UIColor.shadowColor.cgColor
         if let image = UIImage(systemName: "checkmark.circle") {
             self.imageView?.contentMode = .scaleAspectFit
             self.setImage(image, for: .normal)
         }
-        self.layer.shadowOpacity = 0.3
+        self.layer.shadowOpacity = 0.25
         self.backgroundColor = color
         self.translatesAutoresizingMaskIntoConstraints = false
 

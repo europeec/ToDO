@@ -16,11 +16,12 @@ class MainViewController: UIViewController {
         let calendar = UIDatePicker()
         calendar.datePickerMode = .date
         calendar.preferredDatePickerStyle = .compact
+        calendar.locale = Locale(identifier: "ru_RU")
         return calendar
     }()
 
     let floatingButton = CircleButton(size: ElementSize.FloatingButton.side.rawValue,
-                                      color: .white, label: "")
+                                      color: .floatingButtonColor, label: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +80,11 @@ extension MainViewController: MainModuleViewProtocol {
             UIView.animate(withDuration: 0.5) {
                 self.tableView.isHidden = false
                 self.tableView?.alpha = 1
+            } completion: { _ in
+                if let index = self.presenter.tableData?.firstIndex, index != 0 {
+                    let indexPath = IndexPath(row: 0, section: index)
+                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                }
             }
         }
     }

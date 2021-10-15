@@ -17,16 +17,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SKz-vZ-Fov">
-                        <rect key="frame" x="5" y="5" width="305" height="34"/>
+                        <rect key="frame" x="15" y="5" width="295" height="34"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EU8-bU-TQP">
-                                <rect key="frame" x="0.0" y="0.0" width="305" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EU8-bU-TQP">
+                                <rect key="frame" x="0.0" y="0.0" width="295" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4N-S0-RXZ">
-                                <rect key="frame" x="0.0" y="20.5" width="305" height="13.5"/>
+                                <rect key="frame" x="0.0" y="20.5" width="295" height="13.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,8 +37,8 @@
                 <constraints>
                     <constraint firstItem="SKz-vZ-Fov" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Ljt-9X-4gs"/>
                     <constraint firstAttribute="trailing" secondItem="SKz-vZ-Fov" secondAttribute="trailing" constant="10" id="PX9-Zx-qDw"/>
-                    <constraint firstAttribute="bottom" secondItem="SKz-vZ-Fov" secondAttribute="bottom" constant="5" id="Y6J-4I-6RY"/>
-                    <constraint firstItem="SKz-vZ-Fov" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="p5f-9W-TcI"/>
+                    <constraint firstAttribute="bottom" secondItem="SKz-vZ-Fov" secondAttribute="bottom" constant="5" id="Wv9-Fq-gDv"/>
+                    <constraint firstItem="SKz-vZ-Fov" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="p5f-9W-TcI"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

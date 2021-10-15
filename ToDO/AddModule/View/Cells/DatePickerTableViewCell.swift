@@ -15,6 +15,7 @@ class DatePickerTableViewCell: UITableViewCell {
     @IBOutlet weak var datePicker: UIDatePicker! {
         didSet {
             datePicker.addTarget(self, action: #selector(changeDate(sender:)), for: .valueChanged)
+            datePicker.locale = Locale(identifier: "ru_RU")
         }
     }
 
