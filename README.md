@@ -5,7 +5,7 @@
 Для хранения использовать Realm. Не добавлял возможность удаления/изменения объектов, т.к. в тз ничего об этом не говорилось.
 ---
 ### Скриншоты: 
-![Main Screen](screenshots/main.jpg "Main Screen")![Main with Calendar](screenshots/calendar.jpg "Main with Calendar")![Detail](screenshots/detail.jpg "Deatil")![Adding](screenshots/add.jpg "Adding")![Second](screenshots/second.jpg "Second")![Empty](screenshots/empty.jpg "Empty")
+![Main Screen](screenshots/main1.jpg "Main Screen")![Main with Calendar](screenshots/calendar1.jpg "Main with Calendar")![Detail](screenshots/detail1.jpg "Deatil")![Adding](screenshots/add1.jpg "Adding")![Second](screenshots/second1.jpg "Second")![Empty](screenshots/empty1.jpg "Empty")
 
 
 ---
