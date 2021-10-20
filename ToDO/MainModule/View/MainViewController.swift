@@ -54,11 +54,8 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: MainModuleViewProtocol {
-    func loading() {
-//
-    }
-
     func empty() {
+        // TODO: - Empty View
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
@@ -67,15 +64,14 @@ extension MainViewController: MainModuleViewProtocol {
             } completion: { _ in
                 self.tableView.isHidden = true
                 self.tableView?.reloadData()
-                
             }
-
         }
     }
 
     func show() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
+            
             UIView.animate(withDuration: 0.2) {
                 self.tableView.alpha = 0
             } completion: { _ in
@@ -120,5 +116,9 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         cell.titleLabel.text = task.name
         cell.descriptionLabel.text = task.about
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.presentDetailForIndexPath(indexPath)
     }
 }

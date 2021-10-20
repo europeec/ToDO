@@ -11,6 +11,11 @@
 		B1FF44A3CF0C4117B0706F6C /* Pods_ToDO_ToDOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DB4FD2BE07223098AE7CA2 /* Pods_ToDO_ToDOUITests.framework */; };
 		C7E33B4C00F516824601A0B9 /* Pods_ToDO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C99E46A84FB489502D09A43 /* Pods_ToDO.framework */; };
 		F032ACB5271583B200C3256C /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F032ACB4271583B200C3256C /* TaskModel.swift */; };
+		F03C7D34271A2A560031F5AB /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03C7D32271A2A560031F5AB /* EmptyViewController.swift */; };
+		F03C7D35271A2A560031F5AB /* EmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F03C7D33271A2A560031F5AB /* EmptyViewController.xib */; };
+		F088047627204A5B006C7DCC /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088047527204A5B006C7DCC /* DetailPresenter.swift */; };
+		F088047927204C46006C7DCC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088047727204C46006C7DCC /* DetailViewController.swift */; };
+		F088047A27204C46006C7DCC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F088047827204C46006C7DCC /* DetailViewController.xib */; };
 		F098D64127197F0E00D0A13D /* TableViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098D64027197F0E00D0A13D /* TableViewDataModel.swift */; };
 		F098D6442719C9B900D0A13D /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098D6432719C9B900D0A13D /* ExtensionUIColor.swift */; };
 		F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */; };
@@ -86,6 +91,11 @@
 		74592BCEF546EAA6E17453C3 /* Pods-ToDOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDOTests.release.xcconfig"; path = "Target Support Files/Pods-ToDOTests/Pods-ToDOTests.release.xcconfig"; sourceTree = "<group>"; };
 		80A930967F5069567C38B9B0 /* Pods-ToDOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDOTests.debug.xcconfig"; path = "Target Support Files/Pods-ToDOTests/Pods-ToDOTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F032ACB4271583B200C3256C /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		F03C7D32271A2A560031F5AB /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		F03C7D33271A2A560031F5AB /* EmptyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewController.xib; sourceTree = "<group>"; };
+		F088047527204A5B006C7DCC /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		F088047727204C46006C7DCC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F088047827204C46006C7DCC /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		F098D64027197F0E00D0A13D /* TableViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataModel.swift; sourceTree = "<group>"; };
 		F098D6432719C9B900D0A13D /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,6 +179,32 @@
 				F032ACB4271583B200C3256C /* TaskModel.swift */,
 			);
 			path = Memory;
+			sourceTree = "<group>";
+		};
+		F03C7D2F271A2A030031F5AB /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				F03C7D31271A2A250031F5AB /* Presenter */,
+				F03C7D30271A2A1A0031F5AB /* View */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		F03C7D30271A2A1A0031F5AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F088047727204C46006C7DCC /* DetailViewController.swift */,
+				F088047827204C46006C7DCC /* DetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F03C7D31271A2A250031F5AB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F088047527204A5B006C7DCC /* DetailPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		F098D6422719C9A700D0A13D /* Extensions */ = {
@@ -273,6 +309,7 @@
 				F098D6422719C9A700D0A13D /* Extensions */,
 				F032ACB3271581D400C3256C /* Memory */,
 				F0F8E9B9270DB493009954B4 /* MainModule */,
+				F03C7D2F271A2A030031F5AB /* DetailModule */,
 				F0B0B7B4270E11B3003C1FF1 /* AddModule */,
 				F0F8E98E270DB150009954B4 /* Assets.xcassets */,
 				F0F8E990270DB150009954B4 /* LaunchScreen.storyboard */,
@@ -314,6 +351,8 @@
 				F0F8E9C8270DBE25009954B4 /* Cell */,
 				F0F8E9B5270DB192009954B4 /* MainViewController.swift */,
 				F0F8E9B6270DB192009954B4 /* MainViewController.xib */,
+				F03C7D32271A2A560031F5AB /* EmptyViewController.swift */,
+				F03C7D33271A2A560031F5AB /* EmptyViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -471,10 +510,12 @@
 				F0F8E992270DB150009954B4 /* LaunchScreen.storyboard in Resources */,
 				F0F8E98F270DB150009954B4 /* Assets.xcassets in Resources */,
 				F0B0B7BC270EDAED003C1FF1 /* DatePickerTableViewCell.xib in Resources */,
+				F088047A27204C46006C7DCC /* DetailViewController.xib in Resources */,
 				F0B0B7B8270E11E1003C1FF1 /* AddScreenViewController.xib in Resources */,
 				F0F8E98D270DB148009954B4 /* Main.storyboard in Resources */,
 				F0F8E9B8270DB192009954B4 /* MainViewController.xib in Resources */,
 				F0B0B7B1270DBEA2003C1FF1 /* MainTableViewCell.xib in Resources */,
+				F03C7D35271A2A560031F5AB /* EmptyViewController.xib in Resources */,
 				F0B0B7C1270EDB08003C1FF1 /* TextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,6 +665,7 @@
 				F0F8E986270DB148009954B4 /* AppDelegate.swift in Sources */,
 				F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */,
 				F0B0B7C0270EDB08003C1FF1 /* TextFieldTableViewCell.swift in Sources */,
+				F03C7D34271A2A560031F5AB /* EmptyViewController.swift in Sources */,
 				F0B0B7BB270EDAED003C1FF1 /* DatePickerTableViewCell.swift in Sources */,
 				F098D64127197F0E00D0A13D /* TableViewDataModel.swift in Sources */,
 				F0B0B7C9270EDF38003C1FF1 /* AddModel.swift in Sources */,
@@ -634,7 +676,9 @@
 				F0B0B7C4270EDC53003C1FF1 /* ToggleTableViewCell.swift in Sources */,
 				F0F8E9C2270DB905009954B4 /* Router.swift in Sources */,
 				F0B0B7CE270F1D82003C1FF1 /* CircleButton.swift in Sources */,
+				F088047927204C46006C7DCC /* DetailViewController.swift in Sources */,
 				F0B3EF3527177A1C00F723BF /* ExtensionDate.swift in Sources */,
+				F088047627204A5B006C7DCC /* DetailPresenter.swift in Sources */,
 				F0B0B7CC270EF195003C1FF1 /* AddModulePresenter.swift in Sources */,
 				F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */,
 				F0F8E9B7270DB192009954B4 /* MainViewController.swift in Sources */,

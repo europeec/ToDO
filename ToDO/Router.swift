@@ -16,6 +16,7 @@ protocol RouterMainProtocol: AnyObject {
 
 protocol RouterProtocol: RouterMainProtocol {
     func presentAddScreen()
+    func presentDetail(task: Task)
     func popToRoot()
 }
 
@@ -44,6 +45,13 @@ class Router: RouterProtocol {
         }
     }
 
+    func presentDetail(task: Task) {
+        if let navigationController = navigationController {
+            guard let detailViewController = builder?.createDetailModule(with: task) else { return }
+            navigationController.pushViewController(detailViewController, animated: true)
+        }
+    }
+    
     func popToRoot() {
         if let navigationController = navigationController {
             navigationController.popToRootViewController(animated: true)

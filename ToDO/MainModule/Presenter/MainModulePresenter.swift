@@ -9,7 +9,6 @@ import UIKit
 
 // MARK: - ViewProtocol
 protocol MainModuleViewProtocol: AnyObject {
-    func loading()
     func empty()
     func show()
 }
@@ -20,6 +19,7 @@ protocol MainModuleViewPresenterProtocol: AnyObject {
     var tableData: TableModel? { get set }
     init(view: MainModuleViewProtocol, router: RouterProtocol, memory: MemoryManagerProtocol)
     func fetchTasks(at date: Date?)
+    func presentDetailForIndexPath(_ indexPath: IndexPath)
     func tapOnAddButton()
     func changeDate(new: Date)
 }
@@ -41,7 +41,6 @@ class MainPresenter: MainModuleViewPresenterProtocol {
 
     func fetchTasks(at date: Date?) {
         guard let date = date else { return }
-        self.view?.loading()
 
         guard let tasks = memory?.fetchTasks(at: date) else { return }
         self.tableData = TableModel(tasks: tasks)
@@ -53,6 +52,12 @@ class MainPresenter: MainModuleViewPresenterProtocol {
         }
     }
 
+    func presentDetailForIndexPath(_ indexPath: IndexPath) {
+        guard let task = tableData?.sections[indexPath.section].tasks?[indexPath.row] else { return }
+        router?.presentDetail(task: task)
+    }
+    
+    
     func tapOnAddButton() {
         router?.presentAddScreen()
     }
