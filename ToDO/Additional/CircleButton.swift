@@ -8,15 +8,17 @@
 import UIKit
 
 class CircleButton: UIButton {
-    init(size: CGFloat, color: UIColor, label: String) {
+    init(size: CGFloat, color: UIColor, type: CircleButtonType) {
         super.init(frame: .zero)
 
         self.layer.cornerRadius = size / 2
         self.layer.shadowRadius = 8
         self.layer.shadowColor = UIColor.shadowColor.cgColor
-        if let image = UIImage(systemName: "checkmark.circle") {
-            self.imageView?.contentMode = .scaleAspectFit
+        if let image = UIImage(systemName: type.rawValue) {
             self.setImage(image, for: .normal)
+            self.contentVerticalAlignment = .fill
+            self.contentHorizontalAlignment = .fill
+            self.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 15, right: 15)
         }
         self.layer.shadowOpacity = 0.25
         self.backgroundColor = color
@@ -39,4 +41,10 @@ class CircleButton: UIButton {
         self.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor,
                                        constant: ElementSize.FloatingButton.trailingPadding.rawValue).isActive = true
     }
+}
+
+
+enum CircleButtonType: String {
+    case add = "plus.circle"
+    case accept = "checkmark.circle"
 }

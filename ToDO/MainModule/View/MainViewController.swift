@@ -21,7 +21,8 @@ class MainViewController: UIViewController {
     }()
 
     let floatingButton = CircleButton(size: ElementSize.FloatingButton.side.rawValue,
-                                      color: .floatingButtonColor, label: "")
+                                      color: .floatingButtonColor, type: .add
+    )
 
     override func viewDidLoad() {
         super.viewDidLoad()

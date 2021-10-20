@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView! {
         didSet {
-            stackView.layer.cornerRadius = 15
+            stackView.layer.cornerRadius = ElementSize.DetailStackLayer.cornerRadius.rawValue
         }
     }
     

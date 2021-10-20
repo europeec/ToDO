@@ -12,7 +12,7 @@ class AddScreenViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var floatingButton = CircleButton(size: ElementSize.FloatingButton.side.rawValue,
-                                      color: .floatingButtonColor, label: "")
+                                      color: .floatingButtonColor, type: .accept)
 
     override func viewDidLoad() {
         super.viewDidLoad()
