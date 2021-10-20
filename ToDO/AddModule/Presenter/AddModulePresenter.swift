@@ -87,8 +87,13 @@ class AddModulePresenter: AddModuleViewPresenterProtocol {
             let task = Task()
             task.name = name!
             task.about = description
-            task.startDate = startDate
-            task.endDate = endDate
+            if isAllDay {
+                task.startDate = Date.startOfDay(at: allDate)
+                task.endDate = Date.endOfDay(at: allDate)
+            } else {
+                task.startDate = startDate
+                task.endDate = endDate
+            }
             memory?.save(task: task)
             router?.popToRoot()
         } else {

@@ -31,6 +31,6 @@ extension DetailViewController: DetailViewProtocol {
         let task = presenter.task
         nameLabel.text = task.name
         descriptionLabel.text = task.about
-        dateLabel.text = "..."
+        dateLabel.text = "\(task.startDate.getString()) - \(task.endDate.getString())"
     }
 }

@@ -23,6 +23,14 @@ extension Date {
     func getDayComponents() -> DateComponents {
         return Calendar.current.dateComponents([.day, .month, .year], from: self)
     }
+    
+    func getString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        dateFormatter.setLocalizedDateFormatFromTemplate("MMMdd, HH:mm")
+        
+        return dateFormatter.string(from: self)
+    }
 }
 
 extension DateComponents: Comparable {
