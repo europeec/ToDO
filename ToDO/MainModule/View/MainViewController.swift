@@ -9,6 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     var presenter: MainModuleViewPresenterProtocol!
+    var emptyView: EmptyView?
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -34,9 +35,20 @@ class MainViewController: UIViewController {
         calendarView.addTarget(self, action: #selector(changeDate), for: .valueChanged)
         
         floatingButton.addTarget(self, action: #selector(tapOnTheButton), for: .touchUpInside)
+        
+        let side = min(view.frame.width, view.frame.height) * 0.7
+        emptyView = EmptyView(frame: CGRect(x: 0, y: 0,
+                                            width: side,
+                                            height: side))
         self.view.addSubview(floatingButton)
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        emptyView?.center = view.center
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -65,6 +77,8 @@ extension MainViewController: MainModuleViewProtocol {
             } completion: { _ in
                 self.tableView.isHidden = true
                 self.tableView?.reloadData()
+                self.emptyView?.present(view: self.view)
+                
             }
         }
     }
@@ -75,6 +89,7 @@ extension MainViewController: MainModuleViewProtocol {
             
             UIView.animate(withDuration: 0.2) {
                 self.tableView.alpha = 0
+                self.emptyView?.dismiss()
             } completion: { _ in
                 self.tableView.reloadData()
             }

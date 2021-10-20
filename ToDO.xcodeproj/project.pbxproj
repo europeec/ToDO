@@ -16,6 +16,7 @@
 		F088047627204A5B006C7DCC /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088047527204A5B006C7DCC /* DetailPresenter.swift */; };
 		F088047927204C46006C7DCC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088047727204C46006C7DCC /* DetailViewController.swift */; };
 		F088047A27204C46006C7DCC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F088047827204C46006C7DCC /* DetailViewController.xib */; };
+		F088047C2720A050006C7DCC /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088047B2720A050006C7DCC /* EmptyView.swift */; };
 		F098D64127197F0E00D0A13D /* TableViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098D64027197F0E00D0A13D /* TableViewDataModel.swift */; };
 		F098D6442719C9B900D0A13D /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098D6432719C9B900D0A13D /* ExtensionUIColor.swift */; };
 		F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */; };
@@ -96,6 +97,7 @@
 		F088047527204A5B006C7DCC /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		F088047727204C46006C7DCC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F088047827204C46006C7DCC /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		F088047B2720A050006C7DCC /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		F098D64027197F0E00D0A13D /* TableViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataModel.swift; sourceTree = "<group>"; };
 		F098D6432719C9B900D0A13D /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		F0B0B7AE270DBEA2003C1FF1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 				F0F8E9C8270DBE25009954B4 /* Cell */,
 				F0F8E9B5270DB192009954B4 /* MainViewController.swift */,
 				F0F8E9B6270DB192009954B4 /* MainViewController.xib */,
+				F088047B2720A050006C7DCC /* EmptyView.swift */,
 				F03C7D32271A2A560031F5AB /* EmptyViewController.swift */,
 				F03C7D33271A2A560031F5AB /* EmptyViewController.xib */,
 			);
@@ -682,6 +685,7 @@
 				F0B0B7CC270EF195003C1FF1 /* AddModulePresenter.swift in Sources */,
 				F0B0B7B3270DBF76003C1FF1 /* Builder.swift in Sources */,
 				F0F8E9B7270DB192009954B4 /* MainViewController.swift in Sources */,
+				F088047C2720A050006C7DCC /* EmptyView.swift in Sources */,
 				F032ACB5271583B200C3256C /* TaskModel.swift in Sources */,
 				F098D6442719C9B900D0A13D /* ExtensionUIColor.swift in Sources */,
 				F0F8E9BE270DB4C4009954B4 /* MainModulePresenter.swift in Sources */,
