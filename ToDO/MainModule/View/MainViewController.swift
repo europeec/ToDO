@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     var presenter: MainModuleViewPresenterProtocol!
-    var emptyView: EmptyView?
+    private var emptyView: EmptyView?
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -37,9 +37,11 @@ class MainViewController: UIViewController {
         floatingButton.addTarget(self, action: #selector(tapOnTheButton), for: .touchUpInside)
         
         let side = min(view.frame.width, view.frame.height) * 0.7
-        emptyView = EmptyView(frame: CGRect(x: 0, y: 0,
-                                            width: side,
-                                            height: side))
+        let frame = CGRect(x: 0, y: 0,
+                                  width: side,
+                                  height: side)
+        emptyView = EmptyView(frame: frame)
+        
         self.view.addSubview(floatingButton)
     }
 
@@ -68,7 +70,6 @@ class MainViewController: UIViewController {
 
 extension MainViewController: MainModuleViewProtocol {
     func empty() {
-        // TODO: - Empty View
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
@@ -76,9 +77,7 @@ extension MainViewController: MainModuleViewProtocol {
                 self.tableView.alpha = 0
             } completion: { _ in
                 self.tableView.isHidden = true
-                self.tableView?.reloadData()
-                self.emptyView?.present(view: self.view)
-                
+                self.emptyView?.present(view: self.view)  
             }
         }
     }
@@ -92,15 +91,15 @@ extension MainViewController: MainModuleViewProtocol {
                 self.emptyView?.dismiss()
             } completion: { _ in
                 self.tableView.reloadData()
-            }
-
-            UIView.animate(withDuration: 0.3) {
-                self.tableView.isHidden = false
-                self.tableView?.alpha = 1
-            } completion: { _ in
-                if let index = self.presenter.tableData?.firstIndex, index != 0 {
-                    let indexPath = IndexPath(row: 0, section: index)
-                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                
+                UIView.animate(withDuration: 0.3) {
+                    self.tableView.isHidden = false
+                    self.tableView?.alpha = 1
+                } completion: { _ in
+                    if let index = self.presenter.tableData?.firstIndex, index != 0 {
+                        let indexPath = IndexPath(row: 0, section: index)
+                        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                    }
                 }
             }
         }

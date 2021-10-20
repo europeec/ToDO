@@ -11,8 +11,6 @@
 		B1FF44A3CF0C4117B0706F6C /* Pods_ToDO_ToDOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DB4FD2BE07223098AE7CA2 /* Pods_ToDO_ToDOUITests.framework */; };
 		C7E33B4C00F516824601A0B9 /* Pods_ToDO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C99E46A84FB489502D09A43 /* Pods_ToDO.framework */; };
 		F032ACB5271583B200C3256C /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F032ACB4271583B200C3256C /* TaskModel.swift */; };
-		F03C7D34271A2A560031F5AB /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03C7D32271A2A560031F5AB /* EmptyViewController.swift */; };
-		F03C7D35271A2A560031F5AB /* EmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F03C7D33271A2A560031F5AB /* EmptyViewController.xib */; };
 		F088047627204A5B006C7DCC /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088047527204A5B006C7DCC /* DetailPresenter.swift */; };
 		F088047927204C46006C7DCC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088047727204C46006C7DCC /* DetailViewController.swift */; };
 		F088047A27204C46006C7DCC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F088047827204C46006C7DCC /* DetailViewController.xib */; };
@@ -92,8 +90,6 @@
 		74592BCEF546EAA6E17453C3 /* Pods-ToDOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDOTests.release.xcconfig"; path = "Target Support Files/Pods-ToDOTests/Pods-ToDOTests.release.xcconfig"; sourceTree = "<group>"; };
 		80A930967F5069567C38B9B0 /* Pods-ToDOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDOTests.debug.xcconfig"; path = "Target Support Files/Pods-ToDOTests/Pods-ToDOTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F032ACB4271583B200C3256C /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
-		F03C7D32271A2A560031F5AB /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
-		F03C7D33271A2A560031F5AB /* EmptyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewController.xib; sourceTree = "<group>"; };
 		F088047527204A5B006C7DCC /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		F088047727204C46006C7DCC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F088047827204C46006C7DCC /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -354,8 +350,6 @@
 				F0F8E9B5270DB192009954B4 /* MainViewController.swift */,
 				F0F8E9B6270DB192009954B4 /* MainViewController.xib */,
 				F088047B2720A050006C7DCC /* EmptyView.swift */,
-				F03C7D32271A2A560031F5AB /* EmptyViewController.swift */,
-				F03C7D33271A2A560031F5AB /* EmptyViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -518,7 +512,6 @@
 				F0F8E98D270DB148009954B4 /* Main.storyboard in Resources */,
 				F0F8E9B8270DB192009954B4 /* MainViewController.xib in Resources */,
 				F0B0B7B1270DBEA2003C1FF1 /* MainTableViewCell.xib in Resources */,
-				F03C7D35271A2A560031F5AB /* EmptyViewController.xib in Resources */,
 				F0B0B7C1270EDB08003C1FF1 /* TextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,7 +661,6 @@
 				F0F8E986270DB148009954B4 /* AppDelegate.swift in Sources */,
 				F0B0B7B0270DBEA2003C1FF1 /* MainTableViewCell.swift in Sources */,
 				F0B0B7C0270EDB08003C1FF1 /* TextFieldTableViewCell.swift in Sources */,
-				F03C7D34271A2A560031F5AB /* EmptyViewController.swift in Sources */,
 				F0B0B7BB270EDAED003C1FF1 /* DatePickerTableViewCell.swift in Sources */,
 				F098D64127197F0E00D0A13D /* TableViewDataModel.swift in Sources */,
 				F0B0B7C9270EDF38003C1FF1 /* AddModel.swift in Sources */,
@@ -867,6 +859,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U4UX25TX29;
@@ -875,6 +868,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -886,7 +880,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -896,6 +890,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U4UX25TX29;
@@ -904,6 +899,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -915,7 +911,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

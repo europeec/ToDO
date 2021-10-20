@@ -19,6 +19,8 @@ class EmptyView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        self.alpha = 0.0
     }
     
     required init?(coder aDecoder: NSCoder) {

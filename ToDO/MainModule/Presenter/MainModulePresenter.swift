@@ -41,7 +41,7 @@ class MainPresenter: MainModuleViewPresenterProtocol {
 
     func fetchTasks(at date: Date?) {
         guard let date = date else { return }
-
+        
         guard let tasks = memory?.fetchTasks(at: date) else { return }
         self.tableData = TableModel(tasks: tasks)
         
