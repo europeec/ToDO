@@ -9,7 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     var presenter: DetailPresenter!
-    
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -18,11 +18,11 @@ class DetailViewController: UIViewController {
             stackView.layer.cornerRadius = ElementSize.DetailStackLayer.cornerRadius.rawValue
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        show()
+        self.show()
     }
 }
 

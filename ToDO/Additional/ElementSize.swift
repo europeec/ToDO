@@ -17,7 +17,7 @@ enum ElementSize {
     enum NavigationBar: CGFloat {
         case height = 40
     }
-    
+
     enum DetailStackLayer: CGFloat {
         case cornerRadius = 15
     }

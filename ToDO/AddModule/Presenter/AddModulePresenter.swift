@@ -68,7 +68,7 @@ class AddModulePresenter: AddModuleViewPresenterProtocol {
         } else {
             if type == .startDate {
                 startDate = date
-                
+
                 // for set new min date
                 view?.reloadEndDatePicker()
             } else {
@@ -100,11 +100,11 @@ class AddModulePresenter: AddModuleViewPresenterProtocol {
             self.view?.error()
         }
     }
-    
+
     func editName(_ str: String?) {
         self.name = str
     }
-    
+
     func editDescription(_ str: String?) {
         self.description = str
     }

@@ -43,7 +43,6 @@ class CircleButton: UIButton {
     }
 }
 
-
 enum CircleButtonType: String {
     case add = "plus.circle"
     case accept = "checkmark.circle"

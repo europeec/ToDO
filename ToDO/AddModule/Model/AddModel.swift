@@ -39,7 +39,7 @@ enum CellsConfiguration: CaseIterable {
             return Date()
         }
     }
-    
+
     static func getTypeForIndexPath(_ indexPath: IndexPath) -> CellsConfiguration? {
         if indexPath.section == 0 {
             return indexPath.row == 0 ? .textFieldName : .textFieldDescription
@@ -66,4 +66,3 @@ enum TitleForSection {
         }
     }
 }
-

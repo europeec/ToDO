@@ -12,7 +12,7 @@ class TextFieldTableViewCell: UITableViewCell {
     static let nib = UINib(nibName: identifier, bundle: nil)
 
     @IBOutlet weak var textField: UITextField!
-    
+
     var presenter: AddModuleViewPresenterProtocol!
     var type: CellsConfiguration?
     
@@ -23,7 +23,7 @@ class TextFieldTableViewCell: UITableViewCell {
         } else if type == .textFieldDescription {
             presenter.editDescription(sender.text)
         }
-        
+
         textField.resignFirstResponder()
     }
 }

@@ -19,7 +19,7 @@ protocol DetailPresenterViewProtocol: AnyObject {
 class DetailPresenter: DetailPresenterViewProtocol {
     weak var view: DetailViewProtocol?
     var task: Task
-    
+
     required init(view: DetailViewProtocol, task: Task) {
         self.view = view
         self.task = task

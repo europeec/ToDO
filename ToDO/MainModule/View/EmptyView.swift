@@ -14,7 +14,7 @@ class EmptyView: UIView {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-    
+
     private var isPresenting = false
     
     override init(frame: CGRect) {
@@ -22,28 +22,28 @@ class EmptyView: UIView {
         
         self.alpha = 0.0
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+
         self.imageView.frame = self.bounds
     }
-    
+
     func present(view: UIView) {
         view.addSubview(self)
         fadeIn()
     }
-    
+
     func dismiss() {
         if isPresenting {
             fadeOut()
         }
     }
-    
+
     private func fadeIn() {
         UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveEaseInOut, animations: {
             self.alpha = 0.5
@@ -52,7 +52,7 @@ class EmptyView: UIView {
             self.isPresenting = true
         }
     }
-    
+
     private func fadeOut() {
         UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveEaseInOut, animations: {
             self.alpha = 0.0

@@ -51,7 +51,7 @@ class Router: RouterProtocol {
             navigationController.pushViewController(detailViewController, animated: true)
         }
     }
-    
+
     func popToRoot() {
         if let navigationController = navigationController {
             navigationController.popToRootViewController(animated: true)

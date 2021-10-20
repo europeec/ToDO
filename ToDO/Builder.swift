@@ -27,7 +27,7 @@ class Builder: BuilderProtocol {
         view.presenter = presenter
         return view
     }
-    
+
     func createDetailModule(with task: Task) -> UIViewController {
         let view = DetailViewController()
         let presenter = DetailPresenter(view: view, task: task)

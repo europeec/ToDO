@@ -41,10 +41,10 @@ class MainPresenter: MainModuleViewPresenterProtocol {
 
     func fetchTasks(at date: Date?) {
         guard let date = date else { return }
-        
+
         guard let tasks = memory?.fetchTasks(at: date) else { return }
         self.tableData = TableModel(tasks: tasks)
-        
+
         if tasks.count > 0 {
             self.view?.show()
         } else {
@@ -56,8 +56,7 @@ class MainPresenter: MainModuleViewPresenterProtocol {
         guard let task = tableData?.sections[indexPath.section].tasks?[indexPath.row] else { return }
         router?.presentDetail(task: task)
     }
-    
-    
+
     func tapOnAddButton() {
         router?.presentAddScreen()
     }
